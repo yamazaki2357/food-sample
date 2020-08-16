@@ -25,24 +25,67 @@ nav.navbar.navbar-expand-md.my-navbar.bg-white
         = link_to cookings_path
           i.far.fa-images.nav-icon
           .nav-text
-            =t('view')
+            = t('view')
       li.nav-btn
         = link_to introductions_path
           i.fas.fa-search.nav-icon
           .nav-text
-            =t('know')
+            = t('know')
       li.nav-btn.unimplement
         = link_to ""
           i.fas.fa-utensils.nav-icon
           .nav-text
-            =t('create')
+            = t('create')
       li.nav-btn.unimplement
         = link_to ""
           i.fas.fa-shopping-cart.nav-icon
           .nav-text
-            =t('buy')
+            = t('buy')
       li.nav-btn.unimplement
         = link_to ""
           i.far.fa-question-circle.nav-icon
           .nav-text
-            =t('listen')
+            = t('listen')
+  #nav-drawer
+    input#nav-input.nav-unshown type="checkbox" /
+    label#nav-open for="nav-input"
+      span
+    label#nav-close.nav-unshown for="nav-input"
+    #nav-content
+      = link_to image_tag("common/logo3.png"), root_url, class: "header-logo"
+      h4.text-center = t('food-sample')
+      .sc-nav-btn.nav-drawer-content
+        = link_to cookings_path
+          i.far.fa-images.nav-icon
+          = t('view')
+      .sc-nav-btn.nav-drawer-content
+        = link_to introductions_path
+          i.fas.fa-search.nav-icon
+          = t('know')
+      .sc-nav-btn.unimplement.nav-drawer-content
+        = link_to ""
+          i.fas.fa-utensils.nav-icon
+          = t('create')
+      .sc-nav-btn.unimplement.nav-drawer-content
+        = link_to ""
+          i.fas.fa-shopping-cart.nav-icon
+          = t('buy')
+      .sc-nav-btn.unimplement.nav-drawer-content
+        = link_to ""
+          i.far.fa-question-circle.nav-icon
+          = t('listen')
+
+      - if user_signed_in?
+        / ID:1(ゲストユーザー)でログインしてる時はアカウント編集を非表示にする。
+        - if current_user.id >= 2
+          .sc-nav-btn.nav-drawer-content
+            = link_to t('account_edit'), edit_user_registration_path, class: 'btn btn-square-pop link-btn'
+        .sc-nav-btn.nav-drawer-content
+          = link_to t('logout'), destroy_user_session_path, method: :delete, class: 'login-btn btn btn-square-pop'
+      - else
+          .sc-nav-btn.nav-drawer-content
+            = link_to t('sign_up'), new_user_registration_path, class: 'btn btn-square-pop link-btn post-btn'
+          .sc-nav-btn.nav-drawer-content
+            = link_to t('login'), new_user_session_path, class: 'btn btn-square-pop link-btn'
+          .sc-nav-btn.nav-drawer-content
+            = link_to t('guest_login'), users_guest_sign_in_path, method: :post, class: 'login-btn btn btn-square-pop'

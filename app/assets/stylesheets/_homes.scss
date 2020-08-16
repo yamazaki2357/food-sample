@@ -25,10 +25,10 @@
   width: 100%;
 }
 
-nav.top_global_nav {
-  margin: 70px 0px;
-  height: 17vh;
+#top_global_nav {
+  padding: 70px 15px;
   min-height: 280px;
+  overflow: hidden;
 }
 
 #slideshow {
@@ -75,23 +75,22 @@ nav.top_global_nav {
 // ca-menuの表側の円の設定============================================
 .ca-menu {
   margin: auto;
-  display: table;
+  // display: table;
 }
 
-.ca-menu li {
+.ca-menu-sab {
   width: 230px;
   height: 230px;
-  border: 2px solid $sub-color;
+  border: 2px solid #EEC27B;
   position: relative;
-  float: left;
   background-color: #fff;
-  margin-left: -48px;
-  box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  margin: auto;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
   border-radius: 125px;
   transition: all 50ms linear;
 }
 
-.ca-menu li a {
+.ca-menu-sab a {
   text-align: left;
   width: 100%;
   height: 100%;
@@ -159,13 +158,13 @@ nav.top_global_nav {
   100% {opacity: 1}
 }
 
-.ca-menu li:hover {
+.ca-menu-sab:hover {
   border: 20px solid $accent-color;
   z-index: 5;
   transform: scale(1.1);
 }
 
-.ca-menu li:hover .ca-icon {
+.ca-menu-sab:hover .ca-icon {
   color: #000;
   font-size: 60px;
   color: $accent-color;
@@ -176,20 +175,20 @@ nav.top_global_nav {
   font-size: 6em;
 }
 
-.ca-menu li:hover .ca-sub {
+.ca-menu-sab:hover .ca-sub {
   display: block;
 }
 
-.ca-menu li:hover .ca-main {
+.ca-menu-sab:hover .ca-main {
   display: none;
 }
 
-.ca-menu li:hover .circle {
+.ca-menu-sab:hover .circle {
   display: none;
   opacity: 0;
 }
 
-.ca-menu li:hover .ca-main2 {
+.ca-menu-sab:hover .ca-main2 {
   display: block;
   font-size: 40px;
   line-height: 100%;
@@ -412,8 +411,10 @@ nav.top_global_nav {
   height: 70px;
   position: fixed;
   right: 3%;
+  z-index: 20;
   bottom: 4%;
   background: $sub-color;
+  box-shadow: 1px 1px 2px 0px $accent-color;
   border-radius: 50%;
 }
 
@@ -444,11 +445,118 @@ nav.top_global_nav {
 .home-title {
   font-size: 30px;
   text-align: center;
-  padding: 20px;
+  padding: 50px 20px 20px 20px;
 }
 
 .home-link {
   display: block;
   margin: auto;
   width: 50%;
+}
+
+
+// ハンバーガーメニュー====================================
+#nav-drawer {
+  position: relative;
+}
+
+#nav-open {
+  display: inline-block;
+  height: 10px;
+  vertical-align: middle;
+}
+
+#nav-open span, #nav-open span:before, #nav-open span:after {
+  position: absolute;
+  height: 3px;
+  width: 25px;
+  border-radius: 3px;
+  background: #555;
+  display: block;
+  content: '';
+  cursor: pointer;
+}
+
+#nav-open span:before {
+ bottom: -8px;
+}
+
+#nav-open span:after {
+  bottom: -16px;
+}
+
+#nav-close {
+  display: none;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0;
+  transition: .3s ease-in-out;
+}
+
+#nav-content {
+  overflow: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 71%;
+  max-width: 330px;
+  height: 100%;
+  background: #fff;
+  transition: .3s ease-in-out;
+  -webkit-transform: translateX(-105%);
+  transform: translateX(-105%);
+}
+
+#nav-input:checked ~ #nav-close {
+  display: block;
+  opacity: .5;
+}
+
+#nav-input:checked ~ #nav-content {
+  -webkit-transform: translateX(0%);
+  transform: translateX(0%);
+  box-shadow: 6px 0 25px rgba(0,0,0,.15);
+}
+
+.nav-unshown {
+  display:none;
+}
+
+.nav-drawer-content {
+  text-align: center;
+  font-weight: normal;
+  margin: 8px;
+  box-shadow: 0px 0px 1px 1px #EEC27B;
+}
+
+.nav-drawer-content a {
+  width: 100%;
+  height: 40px;
+  letter-spacing: 10px;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.nav-drawer-content:active {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(255, 0, 0, 0.48);
+}
+
+.nav-drawer-content:hover {
+  background-color: #ff9447;
+}
+
+#nav-drawer {
+  display: none;
+}
+
+#nav-content h4 {
+  padding: 38px 5px 38px 0px;
 }

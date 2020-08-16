@@ -1,24 +1,29 @@
-# README
+# アプリ概要
+食品サンプルの紹介アプリです。
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# 制作背景
+実際の食品サンプル製作者が食品サンプルをもっと身近に感じてもらう目的で制作しました。
 
-Things you may want to cover:
+# 環境
+言語(ruby 2.6.4p104)
+フレームワーク(Rails 6.0.3.2)
+開発(Visual Studio Code)
 
-* Ruby version
+# 機能
+ユーザー登録・ログイン機能(Devise)
+画像のCRUD機能
+食品サンプル画像一覧表示
+食材画像一覧表示
+ページネーション(Kaminari)
 
-* System dependencies
+# 使い方
+食品サンプルを紹介するに当たって「食品サンプルを見る」や「食品サンプルを知る」というような動詞ごとで機能を分けてあります。
 
-* Configuration
+- [x] **見る** → 現場で使われている食材規格品を食品サンプルの画像と紐つけて、食品サンプルがどういったパーツで作られているのか見られるようにしています。
+      ログインユーザーには画像の投稿、編集、削除ができるようにして、食品サンプルをシェア出来るようにしています。
 
-* Database creation
+- [x] **知る** → 食品サンプルの製作過程を画像で紹介しています。画像をクリックすることで全画面になります。
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- [ ] **作る** → 食品サンプル体験への案内(今後実装予定)
+- [ ] **買う** → 食品サンプルのオンラインショップ(今後実装予定)
+- [ ] **聞く** → 食品サンプルについてのよくある質問やお問い合わせ(今後実装予定)

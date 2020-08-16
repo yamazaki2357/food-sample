@@ -16,7 +16,7 @@ article
         = image_tag 'top/sample3.jpg'
         = image_tag 'top/sample4.jpg'
         = image_tag 'top/sample5.jpg', class: 'last'
-    .main_banner
+    .main_banner data-turbolinks="false"
       .center-content
         = link_to cooking_categories_url, class: "restaurant"
           span.restaurant-first
@@ -36,11 +36,11 @@ article
           .intorduction-circle3
             .bottom-right-item
               = image_tag 'top/sample4.jpg'
-  nav.top_global_nav
-    ul.ca-menu
-      li
+  #top_global_nav
+    .row.ca-menu
+      .col-sm-4.col-md-2.ca-menu-sab
         = link_to cookings_path
-          span.ca-icon
+          .ca-icon
             i.far.fa-images
         .ca-content
           h2.ca-main = t('view')
@@ -48,7 +48,7 @@ article
           h4.ca-main2 = t('list')
         .circle
           .circle-inner
-      li
+      .col-sm-4.col-md-2.ca-menu-sab
         = link_to introductions_path
           .ca-icon
             i.fas.fa-search
@@ -58,7 +58,7 @@ article
           h4.ca-main2 = t('introduction')
         .circle
           .circle-inner
-      li.unimplement
+      .col-sm-4.col-md-2.unimplement.ca-menu-sab
         = link_to ""
           span.ca-icon
             i.fas.fa-utensils
@@ -68,7 +68,7 @@ article
           h4.ca-main2 = t('experience')
         .circle
           .circle-inner
-      li.unimplement
+      .col-sm-4.col-md-2.unimplement.ca-menu-sab
         = link_to ""
           span.ca-icon
             i.fas.fa-shopping-cart
@@ -78,7 +78,7 @@ article
           h4.ca-main2 = t('purchase')
         .circle
           .circle-inner
-      li.unimplement
+      .col-sm-4.col-md-2.unimplement.ca-menu-sab
         = link_to ""
           span.ca-icon
             i.far.fa-question-circle
@@ -88,7 +88,7 @@ article
           h4.ca-main2 = t('question')
         .circle
           .circle-inner
-      / li.self-introduction
+      / .col-sm-2.self-introduction.ca-menu-sab
       /   = link_to ""
       /   .ca-content
       /     h3.ca-sub2 = t('self_introduction')
@@ -97,7 +97,7 @@ article
   .background-co
     .container
       = render partial: 'shared/cooking_title'
-    = render partial: 'cookings/cooking_list'
+    / = render partial: 'cookings/cooking_list'
     = render partial: 'homes/cooking_link'
   = render partial: 'introductions/food_sample_recipe'
   = render partial: 'homes/introduction_link'

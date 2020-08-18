@@ -29,19 +29,19 @@
   line-height: 0.5;
 }
 
-.container-login {
-  @extend .container-fluid;
-  max-width: 576px;
-  padding: 2rem;
-}
+// .container-login {
+//   @extend .container-fluid;
+//   max-width: 576px;
+//   padding: 2rem;
+// }
 
-.alert-notice {
-  @extend .alert-info;
-}
+// .alert-notice {
+//   @extend .alert-info;
+// }
 
-.alert-alert {
-  @extend .alert-danger;
-}
+// .alert-alert {
+//   @extend .alert-danger;
+// }
 /* 全体 ================================ */
 p {
   margin-bottom: 0;

@@ -2,7 +2,7 @@
 .container
   = render partial: 'shared/product-title'
   .row.form-inline
-    - @products.each do | product |
+    - @products_page.each do | product |
       .form.col-sm-3.col-md-2
         .card
           .card-top
@@ -13,3 +13,4 @@
             = link_to product
               .card-img-top
                 = image_tag product.image if product.image.attached?
+  = paginate @products_page

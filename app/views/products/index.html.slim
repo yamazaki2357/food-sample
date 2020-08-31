@@ -1,16 +1,18 @@
-= render partial: 'modal'
-.container
-  = render partial: 'shared/product-title'
-  .row.form-inline
-    - @products_page.each do | product |
-      .form.col-sm-3.col-md-2
-        .card
-          .card-top
-            = link_to product
-              .card-title
-                = product.product_name
-          .img-body-pro
-            = link_to product
-              .card-img-top
-                = image_tag product.image if product.image.attached?
-  = paginate @products_page
+.pt-2.pb-3
+  = render partial: 'modal'
+  .container
+    = render partial: 'shared/product-title'
+    .row
+      - @products_page.each do | product |
+        .form
+          .col-xs-2
+            .card
+              .card-top
+                = link_to product
+                  .card-title
+                    = product.product_name
+              .img-body-pro
+                = link_to product
+                  .card-img-top
+                    = image_tag product.image if product.image.attached?
+    = paginate @products_page

@@ -29,19 +29,19 @@
   line-height: 0.5;
 }
 
-// .container-login {
-//   @extend .container-fluid;
-//   max-width: 576px;
-//   padding: 2rem;
-// }
+.container-login {
+  max-width: 576px;
+  padding: 2rem;
+  margin: auto;
+}
 
-// .alert-notice {
-//   @extend .alert-info;
-// }
+.alert-notice {
+  background-color: #bfeaff;
+}
 
-// .alert-alert {
-//   @extend .alert-danger;
-// }
+.alert-alert {
+  background-color: #f3c0c0;
+}
 /* 全体 ================================ */
 p {
   margin-bottom: 0;
@@ -431,7 +431,7 @@ header {
 
 .sc-catch-copy {
   font-size: 18px;
-  padding-left: 10px;
+  margin: auto;
 }
 
 .sc-nav-icon {
@@ -488,6 +488,7 @@ footer .footer_inner .footer_nav01 .inner ul.list>li {
   display: inline-table;
   text-align: initial;
   width: 15%;
+  margin-bottom: 30px;
 }
 
 footer .footer_inner .footer_nav01 .inner ul.list>li h2 a {

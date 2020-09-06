@@ -145,7 +145,7 @@
 }
 
 .textArea h3 {
-  margin: 20px 0 10px 0;
+  // margin: 20px 0 10px 0;
 }
 
 .textBlock{
@@ -285,5 +285,9 @@
 }
 
 #landmark {
+  // display: none;
+}
+
+div[id^="form_check_box_list"] {
   display: none;
 }

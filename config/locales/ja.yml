@@ -37,7 +37,7 @@ ja:
   everyones_sample: みんなの投稿
   my_sample: わたしの投稿
   guest_sample: ゲストの投稿
-  your_posts_list: あなたの投稿一覧
+  your_posts_list: あなたの投稿
   guest_posts_list: ゲストの投稿一覧
 
   login: ログイン
@@ -121,7 +121,7 @@ ja:
     create: "%{name}を登録しました。"
     update: "%{name}を更新しました。"
     delete: "%{name}を削除しました。"
-    deleted_information: 'タスク「%{v}」を削除します。よろしいですか？'
+    deleting-confirmation: "「%{name}」を削除します。"
     infomation: '%{v}の情報です'
     error_information: "予期しないエラーが発生しました。「%{name}」は更新できませんでした。"
     cooking-using: "を使った料理"

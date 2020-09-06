@@ -1,22 +1,5 @@
 $(document).on('turbolinks:load', function () {
 
-  // // $("#MyCookingModal").ready(function (event) {
-  // $("#MyCookingModal").on("show.bs.modal", function (event) {
-  //   var modal = $(this);
-  //   var button = $(event.relatedTarget);
-  //   var name = button.data("name");
-  //   console.log(name);
-  //   console.log(modal);
-  //   console.log(button);
-  //   console.log("モーダルが読み込まれました。");
-  //   // var id = button.data("id");
-  //   // console.log(id);
-  //   // var url = button.data("url");
-  //   // console.log(url);
-  //   modal.find(".modal-body").text(name + "を削除します。");
-  //   // modal.find("form").attr("action", url);
-  // });
-
   $(".imgArea img").click(function () {
     $("#graydisplay").html($(this).prop("outerHTML"));
     $("#graydisplay").fadeIn(200);

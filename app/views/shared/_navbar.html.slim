@@ -7,8 +7,8 @@ nav.navbar.navbar-expand-md.my-navbar.bg-white
   #navbarCollapse.collapse.navbar-collapse.my-subnavbar
     ul.navbar-nav.ml-auto.nav-submenus.functions
       - if user_signed_in?
-        / ID:1(ゲストユーザー)でログインしてる時はアカウント編集を非表示にする。
-        - if current_user.id >= 2
+        / ゲストユーザーでログインしてる時はアカウント編集を非表示にする。
+        - if current_user.email != "guest@example.com"
           li.nav-item
             = link_to t('account_edit'), edit_user_registration_path, class: 'nav-link btn btn-square-pop link-btn mr-3'
         li.my-navbtn
@@ -76,8 +76,8 @@ nav.navbar.navbar-expand-md.my-navbar.bg-white
           = t('listen')
 
       - if user_signed_in?
-        / ID:1(ゲストユーザー)でログインしてる時はアカウント編集を非表示にする。
-        - if current_user.id >= 2
+        / ゲストユーザーでログインしてる時はアカウント編集を非表示にする。
+        - if current_user.email != "guest@example.com"
           .sc-nav-btn.nav-drawer-content
             = link_to t('account_edit'), edit_user_registration_path, class: 'btn btn-square-pop link-btn'
         .sc-nav-btn.nav-drawer-content

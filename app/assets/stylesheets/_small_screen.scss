@@ -4,7 +4,9 @@
 
   .list {
     text-align: left;
+    padding-left: 8%;
   }
+
   .catch-copy {
     font-size: 18px;
     line-height: 1.7;
@@ -47,6 +49,14 @@
   .section-bubble10 .introduction-img{ left: 60vw; }
   .section-bubble11 .introduction-img{ left: 10vw; }
   .section-bubble12 .introduction-img{ left: 5vw; }
+
+  .ca-left {
+    margin-left: 0;
+  }
+
+  .ca-right {
+    margin-right: 0;
+  }
 }
 
 @media (max-width: 767px) {
@@ -184,4 +194,14 @@
     font-size: 1.4rem;
   }
 
+  .card-img-top img{
+    max-width: 450px;
+    max-height: 580px;
+    position: absolute;
+    object-fit: contain;
+    top: 0;
+    left: 0;
+    margin: auto;
+    transition: all 0.5s;
+  }
 }

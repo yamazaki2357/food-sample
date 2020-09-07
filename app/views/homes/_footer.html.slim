@@ -1,77 +1,71 @@
-.footer_inner.my-footer
+.footer_inner.my-footer#footer
   .footer_nav01
     .inner
       ul.list
         li
           h2
-            = link_to "#food-sample-list"
+            = link_to cookings_path
               = t('food-sample')
               strong = t('list')
               i.far.fa-images
           ul.sub_list
-            li = link_to "/cooking_categories/33"
+            li = link_to cooking_category_path(1)
               = t('Japanese-food')
-            li = link_to "/cooking_categories/34"
+            li = link_to cooking_category_path(2)
               = t('Western-food')
-            li = link_to "/cooking_categories/35"
+            li = link_to cooking_category_path(3)
               = t('Chinese-food')
-            li = link_to "/cooking_categories/36"
+            li = link_to cooking_category_path(4)
               = t('Ethnic')
-            li = link_to "/cooking_categories/37"
+            li = link_to cooking_category_path(5)
               = t('Asian-food')
-            li = link_to "/cooking_categories/38"
+            li = link_to cooking_category_path(6)
               = t('cafe_and_sweets')
-            li = link_to "/cooking_categories/39"
+            li = link_to cooking_category_path(7)
               = t('confection')
-            li = link_to "/cooking_categories/40"
+            li = link_to cooking_category_path(8)
               = t('Craftsmanship')
         li
           h2
-            = link_to ""
+            = link_to introductions_path
               = t('food-sample')
               strong = t('introduction')
               i.fas.fa-search
           ul.sub_list
-            li = link_to ""
+            li = link_to "#footer"
               = t('How-to-make')
-            li = link_to ""
-              = t('food-sample-cafeteria')
-            li = link_to ""
-              = t('food-sample-exhibition')
-            li = link_to ""
-              = t('food-sample-products')
         li
           h2
-            = link_to ""
+            .unimplement= link_to "#footer"
               = t('food-sample')
               strong = t('experience')
               i.fas.fa-utensils
           ul.sub_list.unimplement
-            li = link_to ""
+            li = link_to "#footer"
               = t('Food-sample-experience')
-            li = link_to ""
+            li = link_to "#footer"
               = t('Upcoming-events')
-            li = link_to ""
+            li = link_to "#footer"
               = t('Past-events')
         li
           h2
-            = link_to ""
+            .unimplement= link_to "#footer"
               = t('food-sample')
               strong = t('purchase')
               i.fas.fa-shopping-cart
           ul.sub_list.unimplement
-            li = link_to ""
+            li = link_to "#footer"
               = t('online-shop')
         li
           h2
-            = link_to "#"
+            .unimplement= link_to "#footer"
               = t('food-sample')
               strong = t('question')
               i.far.fa-question-circle
           ul.sub_list.unimplement
-            li = link_to "#"
+            li = link_to "#footer"
               = t('Frequently-Asked-Questions')
-            li = link_to "#"
+            li = link_to "#footer"
               =t('Contact-Us')
   hr
   .footer_bottom

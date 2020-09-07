@@ -15,7 +15,7 @@ class CookingsController < ApplicationController
   PER = 12
 
   def index
-    @cookings_page = Cooking.page(params[:page]).per(PER)
+    @cookings_page = Cooking.order(id: "DESC").page(params[:page]).per(PER)
   end
 
   def show; end

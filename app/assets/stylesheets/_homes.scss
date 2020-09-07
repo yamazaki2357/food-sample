@@ -5,7 +5,7 @@
   position: relative;
   width: 100%;
   height: 500px;
-  background: white url("top/main_image_bg.png") left 2px repeat-x
+  background: white image-url("top/main_image_bg.png") left 2px repeat-x
 }
 
 #slideshow a {
@@ -75,7 +75,6 @@
 // ca-menuの表側の円の設定============================================
 .ca-menu {
   margin: auto;
-  // display: table;
 }
 
 .ca-menu-sab {
@@ -128,8 +127,12 @@
   display: none;
 }
 
+.ca-margin {
+  margin: auto;
+}
+
 .self-introduction {
-  background-image: url("common/profile.jpg");
+  background-image: image-url("common/profile.jpg");
   background-size: contain;
   border-radius: 50%;
 }
@@ -258,59 +261,9 @@
   left: 4%;
   width: 220px;
   height: 220px;
-  background: url("top/texture_2.jpg") left top repeat;
+  background: image-url("top/texture_2.jpg") left top repeat;
   border-radius: 50%;
 }
-// 円形プログレスバー用ーーーーーーーーーーーーー
-// .circle::before {
-  //   content: "";
-//   display: block;
-//   position: absolute;
-//   top: 0;
-//   left: -125px;
-//   width: 250px;
-//   height: 250px;
-//   background: $circle-base-color;
-//   transform-origin: right 125px;
-//   z-index: -2;
-//   animation: rotate-circle-left 0.5s linear forwards;
-// }
-// .circle::after {
-  //   content: "";
-//   display: block;
-//   position: absolute;
-//   top: 0px;
-//   left: 125px;
-//   width: 250px;
-//   height: 250px;
-//   background: $circle-base-color;
-//   transform-origin: left 125px;
-//   z-index: -1;
-//   animation: rotate-circle-right 0.5s linear forwards;
-// }
-// @keyframes rotate-circle-right {
-  //   0%   {
-//       transform: rotate(0deg);
-//       background: $circle-base-color;
-//   }
-//   50%  {
-//       transform: rotate(180deg);
-//       background: $circle-base-color;
-//   }
-//   50.01% {
-//       transform: rotate(360deg);
-//       background: $circle-coler;
-//   }
-//   100% {
-//     transform: rotate(360deg);
-//     background: $circle-coler;
-//   }
-// }
-// @keyframes rotate-circle-left {
-//   0%   { transform: rotate(0deg); }
-//   50%  { transform: rotate(0deg); }
-//   100% { transform: rotate(180deg); }
-// }
 // 波紋ーーーーーーーーーーーーーーーーー
 @keyframes loading {
   0% {
@@ -345,7 +298,7 @@
 }
 
 .restaurant {
-  background: url("top/restaurant.png") left top no-repeat;
+  background: image-url("top/restaurant.png") left top no-repeat;
   background-size: contain;
   width: 250px;
   height: 250px;
@@ -367,7 +320,7 @@
   transform-origin: 0 0;
   clip: rect(0, 125px, 9999px, 0);
   transition: all 0.5s ease-out 0.5s;
-  background: url("top/left-door.png") left top repeat;
+  background: image-url("top/left-door.png") left top repeat;
   background-size: contain;
 }
 
@@ -376,7 +329,7 @@
   transform-origin: 100% 100%;
   transform: rotateY(90deg);
   clip: rect(0, 9999px, 9999px, 125px);
-  background: url("top/right-door.png") left top repeat;
+  background: image-url("top/right-door.png") left top repeat;
   background-size: contain;
 }
 
@@ -390,13 +343,13 @@
   transition: all 0.5s ease-out;
   opacity: 1;
   z-index: 1;
-  background: url("top/friends_kids-2.png") right bottom no-repeat;
+  background: image-url("top/friends_kids-2.png") right bottom no-repeat;
   z-index: 3;
 }
 
 .restaurant-last {
   transition: none;
-  background: url("top/restaurant2.jpg") left top no-repeat;
+  background: image-url("top/restaurant2.jpg") left top no-repeat;
   background-size: cover;
 }
 
@@ -445,7 +398,7 @@
 .home-title {
   font-size: 30px;
   text-align: center;
-  padding: 50px 20px 20px 20px;
+  padding: 20px;
 }
 
 .home-link {
@@ -453,7 +406,6 @@
   margin: auto;
   width: 50%;
 }
-
 
 // ハンバーガーメニュー====================================
 #nav-drawer {

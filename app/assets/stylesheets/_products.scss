@@ -13,6 +13,8 @@
 .card {
   margin: 5px 0;
   position: relative;
+  max-width: 450px;
+  max-height: 430px;
 }
 
 .card-top {
@@ -38,9 +40,10 @@
 }
 
 .card-img-top img{
-  max-width: 150%;
-  max-height: 130%;
+  max-width: 450px;
+  max-height: 430px;
   position: absolute;
+  object-fit: contain;
   top: 0;
   left: 0;
   margin: auto;
@@ -92,9 +95,17 @@
   color: black;
 }
 
-.form .card {
+.form .col-xs-2 .card {
   width: 190px;
   height: 170px;
+}
+
+.form .col-xs-6 .card {
+  min-width: 280px;
+}
+
+.form {
+  margin: auto;
 }
 
 .py-3 {

@@ -211,7 +211,7 @@ h1.text-center {
 }
 
 @function url-friendly-colour($colour) {
-    @return '%23' + str-slice('#{$colour}', 2, -1)
+  @return '%23' + str-slice('#{$colour}', 2, -1)
 }
 
 .section-bubble {

@@ -1,16 +1,10 @@
 article
   ul.m-header-lang
     li.m-header-lang__item
-    /   / 日本語・英語の切り替え
-    /   / 実際に機能を追加する時はjQueryでis-currentクラスを付け替える
-    /   = link_to t('Japanese'), "", class: "is-current"
-    / li.m-header-lang__item.unimplement
-    /   = link_to 'English', ""
   .main_image
     .inner
       p#slideshow
         = link_to "", cookings_url
-        / 後に別の画像に差し替える
         = image_tag 'top/sample1.jpg', class: 'first active'
         = image_tag 'top/sample2.jpg'
         = image_tag 'top/sample3.jpg'
@@ -88,12 +82,6 @@ article
           h4.ca-main2 = t('question')
         .circle
           .circle-inner
-      / .col-sm-2.self-introduction.ca-menu-sab
-      /   = link_to ""
-      /   .ca-content
-      /     h3.ca-sub2 = t('self_introduction')
-      /   .circle
-      /     .circle-inner
   .background-co
     .container
       = render partial: 'shared/cooking_title'

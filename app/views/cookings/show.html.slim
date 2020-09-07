@@ -24,7 +24,6 @@
                       .card-title
                         = cooking_product_relation.product.product_name
                       = image_tag cooking_product_relation.product.image, class: "pro-img" if cooking_product_relation.product.image.attached?
-        / =link_to t('view_product'), products_path, class: 'nav-link btn margin-custom btn-square-pop link-btn'
 
         - if user_signed_in? && @cooking.user_id == current_user.id
           .edit-delet-area.float-right

@@ -122,8 +122,8 @@ $(document).on('turbolinks:load', function () {
         type: 'POST',
         autoUpload: true,
         formData: form.data('form-data'),
-        paramName: 'file', // S3 does not like nested name fields i.e. name="user[avatar_url]"
-        dataType: 'XML',  // S3 returns XML if success_action_status is set to 201
+        paramName: 'file',
+        dataType: 'XML',
         replaceFileInput: false,
         progressall: function (e, data) {
           var progress = parseInt(data.loaded / data.total * 100, 10);
@@ -142,11 +142,9 @@ $(document).on('turbolinks:load', function () {
           submitButton.prop('disabled', false);
           progressBar.text("Uploading done");
 
-          // extract key and generate URL from response
           var key = $(data.jqXHR.responseXML).find("Key").text();
           var url = '//' + form.data('host') + '/' + key;
 
-          // create hidden field
           var input = $("<input />", { type: 'hidden', name: fileInput.attr('name'), value: url })
           form.append(input);
         },

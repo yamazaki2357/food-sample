@@ -2,7 +2,7 @@
   h4.text-center
     = t('msg.find_from_category')
   .row
-    - @all_cooking_categories.each do | cooking_category |
+    - @all_cooking_categories.each do |cooking_category|
       .col-xs-6.col-sm-4.col-md-3
         = link_to cooking_category
           .card.img-thumbnail

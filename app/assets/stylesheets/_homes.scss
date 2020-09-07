@@ -75,7 +75,6 @@
 // ca-menuの表側の円の設定============================================
 .ca-menu {
   margin: auto;
-  // display: table;
 }
 
 .ca-menu-sab {
@@ -265,56 +264,6 @@
   background: image-url("top/texture_2.jpg") left top repeat;
   border-radius: 50%;
 }
-// 円形プログレスバー用ーーーーーーーーーーーーー
-// .circle::before {
-  //   content: "";
-//   display: block;
-//   position: absolute;
-//   top: 0;
-//   left: -125px;
-//   width: 250px;
-//   height: 250px;
-//   background: $circle-base-color;
-//   transform-origin: right 125px;
-//   z-index: -2;
-//   animation: rotate-circle-left 0.5s linear forwards;
-// }
-// .circle::after {
-  //   content: "";
-//   display: block;
-//   position: absolute;
-//   top: 0px;
-//   left: 125px;
-//   width: 250px;
-//   height: 250px;
-//   background: $circle-base-color;
-//   transform-origin: left 125px;
-//   z-index: -1;
-//   animation: rotate-circle-right 0.5s linear forwards;
-// }
-// @keyframes rotate-circle-right {
-  //   0%   {
-//       transform: rotate(0deg);
-//       background: $circle-base-color;
-//   }
-//   50%  {
-//       transform: rotate(180deg);
-//       background: $circle-base-color;
-//   }
-//   50.01% {
-//       transform: rotate(360deg);
-//       background: $circle-coler;
-//   }
-//   100% {
-//     transform: rotate(360deg);
-//     background: $circle-coler;
-//   }
-// }
-// @keyframes rotate-circle-left {
-//   0%   { transform: rotate(0deg); }
-//   50%  { transform: rotate(0deg); }
-//   100% { transform: rotate(180deg); }
-// }
 // 波紋ーーーーーーーーーーーーーーーーー
 @keyframes loading {
   0% {
@@ -457,7 +406,6 @@
   margin: auto;
   width: 50%;
 }
-
 
 // ハンバーガーメニュー====================================
 #nav-drawer {

@@ -11,7 +11,7 @@
         h1.text-center
           = t('msg.no_post')
     .row.form-inline
-      - @mycookings.each do | cooking |
+      - @mycookings.each do |cooking|
         .col-xs-6.col-sm-3
           = link_to cooking
             .card

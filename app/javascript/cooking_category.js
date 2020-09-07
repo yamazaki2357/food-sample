@@ -2,8 +2,6 @@ $(document).ready(function () {
   var angle = 0;
   var emphasis_count = 1;
   $(".gallery-item1").addClass('addcolor');
-
-
   if ($(".carousel").length) {
     var carousel = document.querySelector(".carousel"),
       figure = carousel.querySelector("figure"),

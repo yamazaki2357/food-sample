@@ -4,7 +4,7 @@
     .cooking-category-title
       = @cooking_category.classification_name
     .row.form-inline
-      - @cooking_category.cookings.each do | cooking |
+      - @cooking_category.cookings.each do |cooking|
         .col-sm-3
           = link_to cooking
             .card

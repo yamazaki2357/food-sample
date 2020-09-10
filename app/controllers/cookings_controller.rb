@@ -38,7 +38,7 @@ class CookingsController < ApplicationController
   def update
     begin
       @cooking.update!(cooking_params)
-      redirect_to cookings_url, notice: t('msg.update', name: t('cooking', name: @cooking.cooking_name))
+      redirect_to user_path(@cooking.user_id), notice: t('msg.update', name: t('cooking', name: @cooking.cooking_name))
     rescue ActiveRecord::RecordInvalid
       render :edit
     rescue

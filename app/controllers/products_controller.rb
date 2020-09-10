@@ -12,7 +12,7 @@ class ProductsController < ApplicationController
   # CSRFトークン検証をスキップする
   skip_before_action :verify_authenticity_token
   PAGE_LIMIT_NUMBER = 30
-  PER = 30
+  PER = 24
 
   def index
     @products_page = Product.order(id: "DESC").page(params[:page]).per(PER)

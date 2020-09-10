@@ -1,7 +1,6 @@
 .background-co
-  = render partial: 'cookings/modal'
   .container
-    - if params[:id] == "1"
+    - if current_user.email == "guest@example.com"
       = render partial: 'shared/guest_post_title'
     - else
       = render partial: 'shared/my_post_title'

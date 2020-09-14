@@ -26,3 +26,4 @@
                 .card-img-top
                   = image_tag cooking.image if cooking.image.attached?
     = paginate @mycookings
+    = render partial: 'cooking_categories/cooking_category_list'

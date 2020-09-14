@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
   end
 
   def set_filter_product_categories
-    @filter_product_categories = ProductCategory.find(23,22,24,5,7,4,3,6,8,9,12,14,15,17,26,28).map{|n| [n.classification_name, n.id]}
+    @filter_product_categories = ProductCategory.find(23,22,24,5,7,4,3,6,8,9,12,14,15,26,28).map{|n| [n.classification_name, n.id]}
     # @filter_product_categories = ProductCategory.find(23,22,24,5,7,4,3,6,8,9,12,13,15,26,28).map{|n| [n.classification_name, n.id]}
     # よく使う食材分類だけ選択可能
     # 1'規格完成品',

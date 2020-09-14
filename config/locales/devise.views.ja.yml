@@ -127,6 +127,7 @@ ja:
         sign_in_with_provider: "%{provider}でログイン"
         sign_up: 新規登録
       minimum_password_length: "（%{count}字以上）"
+      password_validation: "(半角英数字を一種類以上含む8文字以上)"
     unlocks:
       new:
         resend_unlock_instructions: アカウントの凍結解除方法を再送する

@@ -4,7 +4,7 @@
 class Cooking < ApplicationRecord
   validates :cooking_name,
             presence: true,
-            length: { maximum: 25 }
+            length: { maximum: 20 }
 
   has_many :cooking_product_relations, dependent: :destroy
   has_many :products, through: :cooking_product_relations

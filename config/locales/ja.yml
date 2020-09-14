@@ -145,13 +145,6 @@ ja:
     Do_not_edit_posts: 自身の投稿以外は編集できません
     Do_not_edit_product: 食材は編集できません
     Do_not_access_posts_list: 投稿一覧を閲覧する権限がありません
-    # "「品番#{@product.product_number}:#{@product.product_name}」を更新しました。"
-    # ja:
-    #   product_number: 「品番%{number}:%{name}」
-    #   msg:
-    #     update: を更新しました。
-    # (controller)
-    # t('product_number', number: @product.product_number, name: @product.product_name) + t('msg.update')
   activerecord:
     models:
       product: 食材

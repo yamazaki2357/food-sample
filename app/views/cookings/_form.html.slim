@@ -10,7 +10,7 @@
           .form-group.row
             = f.label t('cooking_name'), class: 'col-sm-2 col-form-label'
             .col-sm-10
-              = f.text_field :cooking_name, class: 'form-control', id: 'cooking_name', placeholder: t('cooking_name')
+              = f.text_field :cooking_name, class: 'form-control', id: 'cooking_name', placeholder: t('cooking_name'), minlength: "2", maxlength: "20", required: true
 
           .form-group.row
             = f.label t('classification'), class: 'col-sm-2 col-form-label form-border'
@@ -43,7 +43,7 @@
                     i.fas.fa-file-upload.add
               = f.file_field :image, class: 'control', id: "file", style: "display:none;"
 
-              = f.submit nil , class: 'btn btn-block btn_custom btn-square-pop link-btn'
+              = f.submit nil , class: 'btn btn-block btn_custom btn-square-pop link-btn', id: 'confirm'
               .text-right
                 input[type="reset" value= t('reset') class='btn delete-btn btn_custom btn-square-pop mt-3' id="reset"]
 #landmark

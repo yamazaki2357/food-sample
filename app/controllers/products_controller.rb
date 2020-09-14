@@ -15,18 +15,22 @@ class ProductsController < ApplicationController
   PER = 24
 
   def index
-    @products_page = Product.order(id: "DESC").page(params[:page]).per(PER)
+    @products_page = Product.order(updated_at: "DESC").page(params[:page]).per(PER)
   end
 
   def show; end
 
   def new
-    @product = Product.new
-    @product.cooking_product_relations.build
+    if current_user.admin?
+      @product = Product.new
+      @product.cooking_product_relations.build
+    else
+      redirect_to root_path, notice: t('msg.Do_not_edit_product')
+    end
   end
 
   def edit
-    if @product.user_id != current_user && !current_user.admin?
+    if !current_user.admin?
       redirect_to root_path, notice: t('msg.Do_not_edit_product')
     end
   end

@@ -21,7 +21,7 @@ h1.mx-auto.title.image_area
       =image_tag "menu_chumon_family.png"
   .container
     .row.form-inline
-      - @all_cooking_categories.each.with_index(1) do |cooking_category, m|
+      - @all_cooking_categories.each.with_index(2) do |cooking_category, m|
         .col-xs-6.col-sm-4.col-md-3
           = link_to cooking_category
             div class="card img-thumbnail gallery-item#{m}"

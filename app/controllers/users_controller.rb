@@ -10,6 +10,6 @@ class UsersController < ApplicationController
   end
 
   def show
-    @mycookings = Cooking.order(id: "DESC").where(user_id: params[:id]).page(params[:page]).per(PER)
+    @mycookings = Cooking.order(updated_at: "DESC").where(user_id: params[:id]).page(params[:page]).per(PER)
   end
 end

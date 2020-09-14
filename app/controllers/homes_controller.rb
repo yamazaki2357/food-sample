@@ -6,7 +6,6 @@ class HomesController < ApplicationController
   before_action :set_user, only: %i[index]
 
   def index
-    @cooking_category_various = Cooking.find(10,13,21,36)
-    # トップ画面に表示する料理をIDで４つ選んで表示
+    @cooking_category_various = Cooking.where(cooking_name: ["天ぷらそば定食","シチュー","エビチリ天津飯セット","ベリーワッフル"])
   end
 end

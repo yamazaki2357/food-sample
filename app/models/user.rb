@@ -8,7 +8,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   validates :password, presence: true,
                      format: { with: /\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{8,100}+\z/i,
-                     message: "には半角英数字をそれぞれ一種類以上含めてくださ" }
+                     message: "には半角英数字をそれぞれ一種類以上含めてください" }
   has_many :cookings
 
   def self.guest

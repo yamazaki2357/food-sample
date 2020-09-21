@@ -5,7 +5,7 @@
       = @cooking_category.classification_name
     .row.form-inline
       - @cooking_category.cookings.each do |cooking|
-        .col-sm-3
+        .col-xs-12.col-sm-6.col-md-3
           = link_to cooking
             .card
               .ribbon.ribbon-top-right

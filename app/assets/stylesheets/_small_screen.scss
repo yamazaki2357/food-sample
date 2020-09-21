@@ -62,10 +62,16 @@
 @media (max-width: 767px) {
   #nav-drawer {
     display: block;
+    text-align: right;
+    flex-grow: 3;
   }
 }
 
 @media (max-width: 576px) {
+
+  .fa, .far, .fas {
+    width: 32px;
+  }
 
   $spacer-height: 19.97vw;
   h1 {
@@ -97,7 +103,7 @@
   .introduction-img {
     position: absolute;
     bottom: 0;
-    top: 0;
+    top: 100px;
     margin: auto;
     object-fit: cover;
   }
@@ -114,7 +120,7 @@
   }
 
   .section-bubble1 .introduction-img{ left: 50vw; }
-  .section-bubble2 .introduction-img{ left: 50vw; }
+  .section-bubble2 .introduction-img{ left: 50vw; bottom: 100px}
   .section-bubble3 .introduction-img{ left: 40vw; }
   .section-bubble4 .introduction-img{ left: 50vw; }
   .section-bubble5 .introduction-img{ left: 41vw; }
@@ -124,7 +130,7 @@
   .section-bubble9 .introduction-img{ left: 44vw; }
   .section-bubble10 .introduction-img{ left: 33vw; }
   .section-bubble11 .introduction-img{ top: 44px; left: 8vw; }
-  .section-bubble12 .introduction-img{ left: 5vw; }
+  .section-bubble12 .introduction-img{ left: 5vw; bottom: 230px;}
 
   .main_image {
     position: relative;
@@ -157,8 +163,23 @@
     transition: all 400ms linear;
     position: absolute;
     width: 0;
-    left: 36%;
     top: 0;
+  }
+
+  .icon01 {
+    left: 36%;
+  }
+  .icon02 {
+    left: 36%;
+  }
+  .icon03 {
+    left: 37.5%;
+  }
+  .icon04 {
+    left: 36.5%;
+  }
+  .icon05 {
+    left: 37.5%;
   }
 
   .ca-main {
@@ -192,16 +213,5 @@
 
   .home-title {
     font-size: 1.4rem;
-  }
-
-  .card-img-top img{
-    max-width: 450px;
-    max-height: 580px;
-    position: absolute;
-    object-fit: contain;
-    top: 0;
-    left: 0;
-    margin: auto;
-    transition: all 0.5s;
   }
 }

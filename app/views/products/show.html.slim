@@ -1,30 +1,31 @@
-= render partial: 'modal'
-.container
-  = render partial: 'shared/product-title'
-  .itemWrap.row
-    .imgArea.col-sm-6
-      p
-        = image_tag @product.image if @product.image.attached?
-    .textArea.col-sm-6
-      h2
-        = @product.product_name
-      h3
-        = @product.product_name
-        = t('msg.cooking-using')
-      .textBlock.row.form-inline
-        - @product.cooking_product_relations.each do |cooking_product_relation|
-          .col-sm-3
-            .card= link_to cooking_product_relation.cooking
-              .card-title
-                = cooking_product_relation.cooking.cooking_name
-              = image_tag cooking_product_relation.cooking.image, class: "pro-img" if cooking_product_relation.cooking.image.attached?
-      =link_to t('view_food_samples'), cookings_path, class: 'nav-link btn margin-custom btn-square-pop link-btn'
-      - if user_signed_in? && current_user.admin?
-          .edit-delet-area.float-right
-            .horizontal-border
-              = t('admin_edit_delete_authority')
-            .float-right.p-2
-              = link_to t('edit'), edit_product_path, class: 'btn mr-3 btn-square-pop link-btn'
-              button.btn.delete-btn.btn-square-pop data-target="#myModal" data-name=@product.product_name data-number=@product.product_number data-id=@product.id data-toggle="modal" type="button" data-url="#{@product.id}"
-                = t('delete')
-#graydisplay
+.pt-2.pb-3
+  = render partial: 'modal'
+  .container
+    = render partial: 'shared/product-title'
+    .itemWrap.row
+      .imgArea.col-sm-6
+        p
+          = image_tag @product.image if @product.image.attached?
+      .textArea.col-sm-6
+        h2
+          = @product.product_name
+        h3
+          = @product.product_name
+          = t('msg.cooking-using')
+        .textBlock.row.form-inline
+          - @product.cooking_product_relations.each do |cooking_product_relation|
+            .col-sm-3
+              .card= link_to cooking_product_relation.cooking
+                .card-title
+                  = cooking_product_relation.cooking.cooking_name
+                = image_tag cooking_product_relation.cooking.image, class: "pro-img" if cooking_product_relation.cooking.image.attached?
+        =link_to t('view_food_samples'), cookings_path, class: 'nav-link btn margin-custom btn-square-pop link-btn'
+        - if user_signed_in? && current_user.admin?
+            .edit-delet-area.float-right
+              .horizontal-border
+                = t('admin_edit_delete_authority')
+              .float-right.p-2
+                = link_to t('edit'), edit_product_path, class: 'btn mr-3 btn-square-pop link-btn'
+                button.btn.delete-btn.btn-square-pop data-target="#myModal" data-name=@product.product_name data-number=@product.product_number data-id=@product.id data-toggle="modal" type="button" data-url="#{@product.id}"
+                  = t('delete')
+  #graydisplay

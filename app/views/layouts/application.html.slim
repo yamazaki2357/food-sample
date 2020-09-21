@@ -14,7 +14,9 @@ html
 
     meta charset="utf-8" /
     link href="https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c" rel="stylesheet"
-    
+
+    = favicon_link_tag 'favicon.png'
+
   body.wf-roundedmplus1c
     - if flash.notice.present?
       = render 'shared/flash_massages'

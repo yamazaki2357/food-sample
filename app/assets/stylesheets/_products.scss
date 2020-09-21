@@ -43,13 +43,16 @@
 }
 
 .card-img-top img{
-  max-width: 450px;
-  max-height: 430px;
-  position: absolute;
-  object-fit: contain;
-  top: 0;
-  left: 0;
-  margin: auto;
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  transition: all 0.5s;
+}
+
+.form .card-img-top img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
   transition: all 0.5s;
 }
 

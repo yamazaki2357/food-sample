@@ -3,21 +3,20 @@
     = render partial: 'shared/cooking_title'
     .row
       - @cookings_page.each do |cooking|
-        .form
-          .col-xs-6.col-sm-4.col-md-3
-            .card
-              = link_to cooking
-                .ribbon.ribbon-top-right
-                  - if cooking.cooking_category.classification_name == t('cafe_and_sweets')
-                    span = t('sweets')
-                    / 文字数がリボン内に収まらないので短縮
-                  - else
-                    span = cooking.cooking_category.classification_name
-                .card-top
-                  .card-title
-                    = cooking.cooking_name
-                .img-body-co
-                  .card-img-top
-                    = image_tag cooking.image if cooking.image.attached?
+        .col-xs-12.col-sm-6.col-md-3
+          .card
+            = link_to cooking
+              .ribbon.ribbon-top-right
+                - if cooking.cooking_category.classification_name == t('cafe_and_sweets')
+                  span = t('sweets')
+                  / 文字数がリボン内に収まらないので短縮
+                - else
+                  span = cooking.cooking_category.classification_name
+              .card-top
+                .card-title
+                  = cooking.cooking_name
+              .img-body-co
+                .card-img-top
+                  = image_tag cooking.image if cooking.image.attached?
     = paginate @cookings_page
   = render partial: 'cooking_categories/cooking_category_list'

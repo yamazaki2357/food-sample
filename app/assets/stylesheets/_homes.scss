@@ -414,8 +414,11 @@
 
 #nav-open {
   display: inline-block;
-  height: 10px;
   vertical-align: middle;
+  width: 25px;
+  height: 20px;
+  margin-bottom: 0;
+  cursor: pointer;
 }
 
 #nav-open span, #nav-open span:before, #nav-open span:after {

@@ -19,7 +19,7 @@ h1.text-center {
 .introduction-img {
   position: absolute;
   bottom: 0;
-  top: 0;
+  top: 100px;
   margin: auto;
   object-fit: cover;
   z-index: 10;
@@ -38,17 +38,17 @@ h1.text-center {
 }
 
 .section-bubble1 .introduction-img { left: 30vw; }
-.section-bubble2 .introduction-img { left: 48vw; }
-.section-bubble3 .introduction-img{ left: 30vw; }
-.section-bubble4 .introduction-img{ left: 48vw; }
-.section-bubble5 .introduction-img{ left: 30vw; }
-.section-bubble6 .introduction-img{ left: 48vw; }
+.section-bubble2 .introduction-img { left: 48vw; bottom: 100px; }
+.section-bubble3 .introduction-img { left: 30vw; }
+.section-bubble4 .introduction-img { left: 48vw; }
+.section-bubble5 .introduction-img { left: 30vw; }
+.section-bubble6 .introduction-img { left: 48vw; }
 .section-bubble7 .introduction-img { left: 30vw; }
 .section-bubble8 .introduction-img { left: 48vw; }
-.section-bubble9 .introduction-img{ left: 30vw; }
-.section-bubble10 .introduction-img{ left: 47vw; }
-.section-bubble11 .introduction-img{ left: 15vw; }
-.section-bubble12 .introduction-img{ left: 48vw; }
+.section-bubble9 .introduction-img { left: 30vw; }
+.section-bubble10 .introduction-img { left: 47vw; }
+.section-bubble11 .introduction-img { left: 15vw; }
+.section-bubble12 .introduction-img { left: 48vw; bottom: 250px; }
 
 .introduction-img img:hover {
   transition: 0.3s ease-out;

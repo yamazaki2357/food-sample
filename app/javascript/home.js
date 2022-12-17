@@ -1,12 +1,17 @@
-$(document).on("turbolinks:load", function () {
-  var pagetop = $("#page-top");
-  var navbar = $("#scroll-nav");
 
-  pagetop.hide();
-  navbar.hide();
+$(document).ready( function(){
+// ページ読み込み時に実行する処理
+  console.log("成功です！！");
+});
 
-  pagetop.click(function () {
-    $("body,html").animate(
+$(document).on(function () {
+  var $pagetop = $('#page-top');
+  var $navbar = $('#scroll-nav');
+  $pagetop.hide();
+  $navbar.hide();
+
+  $pagetop.click(function () {
+    $('body,html').animate(
       {
         scrollTop: 0,
       },
@@ -17,24 +22,24 @@ $(document).on("turbolinks:load", function () {
 
   $(window).scroll(function () {
     if ($(this).scrollTop() <= 115) {
-      navbar.hide();
+      $navbar.hide();
     } else if ($(this).scrollTop() <= 1000) {
-      navbar.show();
-      pagetop.fadeOut();
+      $navbar.show();
+      $pagetop.fadeOut();
     } else {
-      pagetop.fadeIn();
+      $pagetop.fadeIn();
     }
   });
 });
 
 $(document).ready(function () {
   $(window).scroll(function () {
-    $(".fadein").each(function () {
+    $('.fadein').each(function () {
       var elemPos = $(this).offset().top;
       var scroll = $(window).scrollTop();
       var windowHeight = $(window).height();
       if (scroll > elemPos - windowHeight + 200) {
-        $(this).addClass("scrollin");
+        $(this).addClass('scrollin');
       }
     });
   });
@@ -58,10 +63,10 @@ $(document).ready(function () {
 
   $('a[href^="#"]').click(function () {
     var time = 500;
-    var href = $(this).attr("href");
-    var target = $(href == "#" ? "html" : href);
+    var href = $(this).attr('href');
+    var target = $(href == '#' ? 'html' : href);
     var distance = target.offset().top;
-    $("html, body").animate({ scrollTop: distance }, time, "swing");
+    $('html, body').animate({ scrollTop: distance }, time, 'swing');
     return false;
   });
 });

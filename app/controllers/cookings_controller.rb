@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-#cooking_management
+# cooking_management
 class CookingsController < ApplicationController
   before_action :set_cooking, only: %i[show edit update destroy]
   before_action :set_products, only: %i[new create edit update]

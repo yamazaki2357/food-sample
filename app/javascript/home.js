@@ -1,7 +1,7 @@
 
 $(document).ready( function(){
 // ページ読み込み時に実行する処理
-  console.log("成功です！！");
+  console.log("home.jsを読み込んでいます！");
 });
 
 $(document).on(function () {

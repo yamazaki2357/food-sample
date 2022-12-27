@@ -1,16 +1,19 @@
 $(document).on('turbolinks:load', function () {
+  console.log('cooking.jsを読み込んでいます');
 
-  $(".imgArea img").click(function () {
-    $("#graydisplay").html($(this).prop("outerHTML"));
-    $("#graydisplay").fadeIn(200);
+  // クリックすると画面を拡大表示する
+  $(".imgArea img").on('click', function () {
+    $("#gray-display").html($(this).prop("outerHTML"));
+    $("#gray-display").fadeIn(200);
   });
 
-  $("#graydisplay, #graydisplay img").click(function () {
-    $("#graydisplay").fadeOut(200);
+  $("#gray-display, #gray-display img").on('click', function () {
+    $("#gray-display").fadeOut(200);
   });
 
   // ドロップボックスに応じたチェックボックスを生成する
   function generate_checkbox(productClassification) {
+    console.log('generate_checkboxが呼び出されました。');
     // IDを元に選択したドロップボックスに該当するチェックボックスを配列として取得
     $.ajax({
       type: "GET",

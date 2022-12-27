@@ -1,7 +1,7 @@
 article
   ul.m-header-lang
     li.m-header-lang__item
-  .main_image
+  .main-image
     .inner
       p#slideshow
         = link_to "", cookings_url
@@ -31,57 +31,58 @@ article
             .bottom-right-item
               = image_tag 'top/sample4.jpg'
   #top_global_nav
-    .row.ca-menu
-      .col-sm-4.col-md-2.ca-menu-sab
-        = link_to cookings_path
-          .ca-icon.icon01
-            i.far.fa-images
-        .ca-content
-          h2.ca-main = t('view')
-          h3.ca-sub = t('food-sample')
-          h4.ca-main2 = t('list')
-        .circle
-          .circle-inner
-      .col-sm-4.col-md-2.ca-menu-sab
-        = link_to introductions_path
-          .ca-icon.icon02
-            i.fas.fa-search
-        .ca-content
-          h2.ca-main = t('know')
-          h3.ca-sub = t('food-sample')
-          h4.ca-main2 = t('introduction')
-        .circle
-          .circle-inner
-      .col-sm-4.col-md-2.unimplement.ca-menu-sab
-        div
-          span.ca-icon.icon03
-            i.fas.fa-utensils
-        .ca-content
-          h2.ca-main = t('create')
-          h3.ca-sub = t('food-sample')
-          h4.ca-main2 = t('experience')
-        .circle
-          .circle-inner
-      .col-sm-4.col-md-2.unimplement.ca-menu-sab.ca-right
-        div
-          span.ca-icon.icon04
-            i.fas.fa-shopping-cart
-        .ca-content
-          h2.ca-main = t('buy')
-          h3.ca-sub = t('food-sample')
-          h4.ca-main2 = t('purchase')
-        .circle
-          .circle-inner
-      .col-sm-4.col-md-2.unimplement.ca-menu-sab.ca-left
-        div
-          span.ca-icon.icon05
-            i.far.fa-question-circle
-        .ca-content
-          h2.ca-main = t('listen')
-          h3.ca-sub = t('food-sample')
-          h4.ca-main2 = t('question')
-        .circle
-          .circle-inner
+    .ca-menu
+      ul.flex-menu
+        li.ca-menu-sab
+          = link_to cookings_path
+            .ca-icon.icon01
+              i.far.fa-images
+          .ca-content
+            h2.ca-main = t('view')
+            h3.ca-sub = t('food-sample')
+            h4.ca-main2 = t('list')
+          .circle
+            .circle-inner
+        li.ca-menu-sab
+          = link_to introductions_path
+            .ca-icon.icon02
+              i.fas.fa-search
+          .ca-content
+            h2.ca-main = t('know')
+            h3.ca-sub = t('food-sample')
+            h4.ca-main2 = t('introduction')
+          .circle
+            .circle-inner
+        li.ca-menu-sab.unimplement
+          div
+            span.ca-icon.icon03
+              i.fas.fa-utensils
+          .ca-content
+            h2.ca-main = t('create')
+            h3.ca-sub = t('food-sample')
+            h4.ca-main2 = t('experience')
+          .circle
+            .circle-inner
+        li.ca-menu-sab.unimplement.ca-right
+          div
+            span.ca-icon.icon04
+              i.fas.fa-shopping-cart
+          .ca-content
+            h2.ca-main = t('buy')
+            h3.ca-sub = t('food-sample')
+            h4.ca-main2 = t('purchase')
+          .circle
+            .circle-inner
+        li.ca-menu-sab.unimplement.ca-left
+          div
+            span.ca-icon.icon05
+              i.far.fa-question-circle
+          .ca-content
+            h2.ca-main = t('listen')
+            h3.ca-sub = t('food-sample')
+            h4.ca-main2 = t('question')
+          .circle
+            .circle-inner
   .background-co
     .container
       = render partial: 'shared/cooking_title'

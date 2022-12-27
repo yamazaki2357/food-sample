@@ -221,7 +221,10 @@ header {
 }
 
 .my-navbar {
+  background-color: white;
   padding: 0 5%;
+  max-width: 2000px;
+  margin: 0 auto;
 }
 
 .header-logo img {
@@ -280,19 +283,23 @@ header {
 
 .functions li {
   display: table-cell;
-  width: 90px;
+  width: 70px;
+  padding: 10px 40px 0 40px;
 }
 
 .functions li a {
   overflow: hidden;
   position: relative;
   display: block;
-  margin: 8px 2px 2px 2px;
-  line-height: 0.9;
+  line-height: 0.8;
   text-align: center;
   text-decoration: none;
   white-space: nowrap;
   box-sizing: border-box;
+}
+
+.nav-submenus li {
+  padding: 8px 0 0 0;
 }
 
 .my-subnavbar {
@@ -562,10 +569,10 @@ footer .footer_inner .footer_bottom .logo {
   letter-spacing: 5px;
 }
 
-.main_image .inner {
+.main-image .inner {
   position: relative;
   height: 100%;
-  width: 90%;
+  width: 85%;
   margin: 0 auto;
   overflow: hidden;
 }

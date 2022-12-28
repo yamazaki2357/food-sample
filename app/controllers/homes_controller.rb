@@ -7,6 +7,7 @@ class HomesController < ApplicationController
 
   def index
     # @cooking_category_various = Cooking.where(cooking_name: %w[天ぷらそば定食 シチュー エビチリ天津飯セット ベリーワッフル])
-    # TODO:トップページに名称指定で掲載していたもの
+    @cooking_category_various = []
+    # TODO: トップページに名称指定で掲載していたもの
   end
 end

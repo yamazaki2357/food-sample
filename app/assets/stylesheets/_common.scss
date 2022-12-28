@@ -231,10 +231,10 @@ header {
   float: left;
   width: 105px;
   height: 105px;
-}
 
-.header-logo:hover {
-  opacity: 0.7;
+  &:hover {
+    opacity: 0.7;
+  }
 }
 
 .catch-copy {
@@ -246,25 +246,27 @@ header {
 .header-menus {
   float: right;
   padding-right: 20px;
+
+  li {
+      float: left;
+      line-height: 64px;
+      font-size: 13px;
+      color: white;
+      padding-left: 15px;
+    }
+
+  a {
+    float: left;
+    font-size: 13px;
+    color: white;
+  }
+
+  .fa {
+    padding-right: 5px;
+  }
 }
 
-.header-menus li {
-  float: left;
-  line-height: 64px;
-  font-size: 13px;
-  color: white;
-  padding-left: 15px;
-}
 
-.header-menus a {
-  float: left;
-  font-size: 13px;
-  color: white;
-}
-
-.header-menus .fa {
-  padding-right: 5px;
-}
 
 .nav-submenus {
   margin: 0;
@@ -279,23 +281,23 @@ header {
   table-layout: fixed;
   border-collapse: collapse;
   max-width: 1800px;
-}
 
-.functions li {
-  display: table-cell;
-  width: 70px;
-  padding: 10px 40px 0 40px;
-}
+  li {
+    display: table-cell;
+    width: 70px;
+    padding: 10px 22px 0 22px;
 
-.functions li a {
-  overflow: hidden;
-  position: relative;
-  display: block;
-  line-height: 0.8;
-  text-align: center;
-  text-decoration: none;
-  white-space: nowrap;
-  box-sizing: border-box;
+    a {
+        overflow: hidden;
+        position: relative;
+        display: block;
+        line-height: 0.8;
+        text-align: center;
+        text-decoration: none;
+        white-space: nowrap;
+        box-sizing: border-box;
+      }
+  }
 }
 
 .nav-submenus li {

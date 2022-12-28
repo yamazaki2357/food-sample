@@ -1,3 +1,6 @@
+# frozen_string_literal: true
+
+# 食品カテゴリー
 class CookingCategoriesController < ApplicationController
   before_action :set_cooking_category, only: %i[show]
   before_action :set_all_cooking_categories, only: %i[index show]

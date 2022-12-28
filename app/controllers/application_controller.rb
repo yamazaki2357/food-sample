@@ -9,11 +9,11 @@ class ApplicationController < ActionController::Base
   private
 
   def set_product_categories
-    @product_categories = ProductCategory.all.map{|n| [n.classification_name, n.id]}
+    @product_categories = ProductCategory.all.map { |n| [n.classification_name, n.id] }
   end
 
   def set_filter_product_categories
-    @filter_product_categories = ProductCategory.find(23,22,24,5,7,4,3,6,8,9,12,14,15,26,28).map{|n| [n.classification_name, n.id]}
+    @filter_product_categories = ProductCategory.find(23, 22, 24, 5, 7, 4, 3, 6, 8, 9, 12, 14, 15, 26, 28).map { |n| [n.classification_name, n.id] }
     # @filter_product_categories = ProductCategory.find(23,22,24,5,7,4,3,6,8,9,12,13,15,26,28).map{|n| [n.classification_name, n.id]}
     # よく使う食材分類だけ選択可能
     # 1'規格完成品',
@@ -47,7 +47,7 @@ class ApplicationController < ActionController::Base
   end
 
   def set_cooking_categories
-    @cooking_categories = CookingCategory.all.map{|n| [n.classification_name, n.id]}
+    @cooking_categories = CookingCategory.all.map { |n| [n.classification_name, n.id] }
   end
 
   def set_all_cooking_categories
@@ -73,8 +73,6 @@ class ApplicationController < ActionController::Base
 
   def correct_user
     @correct_user = User.find(params[:id])
-    if @correct_user != current_user && !current_user.admin?
-      redirect_to root_path, notice: t('msg.Do_not_access_posts_list')
-    end
+    @correct_user != current_user && !current_user.admin? if redirect_to root_path, notice: t('msg.Do_not_access_posts_list')
   end
 end

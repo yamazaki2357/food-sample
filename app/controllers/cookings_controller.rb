@@ -30,9 +30,7 @@ class CookingsController < ApplicationController
   end
 
   def edit
-    if @cooking.user != current_user && !current_user.admin?
-      redirect_to root_path, notice: t('msg.Do_not_edit_posts')
-    end
+    @cooking.user != current_user && !current_user.admin? if redirect_to root_path, notice: t('msg.Do_not_edit_posts')
   end
 
   def update
@@ -77,7 +75,8 @@ class CookingsController < ApplicationController
     @cooking = Cooking.find(params[:id])
   end
 
-  def set_s3_direct_post
-    @s3_direct_post = S3_BUCKET.presigned_post(key: "uploads/#{SecureRandom.uuid}/${filename}", success_action_status: '201', acl: 'public-read')
-  end
+  # TODO: 使われていない。どうゆう役割か調べてから消す
+  # def set_s3_direct_post
+  #   @s3_direct_post = S3_BUCKET.presigned_post(key: "uploads/#{SecureRandom.uuid}/${filename}", success_action_status: '201', acl: 'public-read')
+  # end
 end

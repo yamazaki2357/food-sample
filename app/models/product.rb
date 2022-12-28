@@ -1,12 +1,10 @@
-# frozen_string_literal: true
-
-# Product
 class Product < ApplicationRecord
   validates :product_name,
             presence: true,
             length: { maximum: 30 },
             uniqueness: { case_sensitive: true }
 
+  # TODO: なにこれ？
   # validates :product_number,
   #           presence: true,
   #           numericality: { only_integer: true },

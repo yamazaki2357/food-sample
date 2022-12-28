@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# ユーザークラスです
 class UsersController < ApplicationController
   before_action :authenticate_user!
   before_action :set_all_cooking_categories, only: %i[index show]

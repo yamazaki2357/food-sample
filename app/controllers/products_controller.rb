@@ -1,6 +1,5 @@
 # frozen_string_literal: true
 
-# products controller
 class ProductsController < ApplicationController
   before_action :set_product, only: %i[show edit update destroy]
   before_action :set_cookings, only: %i[new create edit update]

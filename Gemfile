@@ -24,8 +24,8 @@ gem 'slim-rails', '>= 3.1.3'
 
 gem 'ransack'
 gem 'rubocop', require: false
-gem 'rubocop-rails', require: false
 gem 'rubocop-performance', require: false
+gem 'rubocop-rails', require: false
 
 gem 'bootstrap-sass'
 gem 'data-confirm-modal'
@@ -38,10 +38,10 @@ gem 'dotenv-rails'
 
 group :development, :test do
   gem 'byebug', platforms: %i[mri mingw x64_mingw]
-  gem 'pry-rails'
   gem 'pry-alias'
-  gem 'pry-doc'
   gem 'pry-byebug'
+  gem 'pry-doc'
+  gem 'pry-rails'
 end
 
 group :development do

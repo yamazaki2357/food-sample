@@ -2,7 +2,8 @@
 
 # Users
 class Users::SessionsController < Devise::SessionsController
-  def edit; end
+  def edit
+  end
 
   def new_guest
     user = User.guest

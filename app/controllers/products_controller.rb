@@ -18,7 +18,8 @@ class ProductsController < ApplicationController
     @products_page = Product.order(updated_at: 'DESC').page(params[:page]).per(PER)
   end
 
-  def show; end
+  def show
+  end
 
   def new
     if current_user.admin?
@@ -44,15 +45,13 @@ class ProductsController < ApplicationController
   end
 
   def update
-    begin
-      @product.update!(product_params)
-      redirect_to products_url, notice: t('msg.update', name: t('product', name: @product.product_name))
-    rescue ActiveRecord::RecordInvalid
-      render :edit
-    rescue
-      @product.errors.add(:base, t('msg.error_information', name: @product.product_name))
-      render :edit
-    end
+    @product.update!(product_params)
+    redirect_to products_url, notice: t('msg.update', name: t('product', name: @product.product_name))
+  rescue ActiveRecord::RecordInvalid
+    render :edit
+  rescue StandardError
+    @product.errors.add(:base, t('msg.error_information', name: @product.product_name))
+    render :edit
   end
 
   def destroy
@@ -63,7 +62,8 @@ class ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:product_name, :product_number, :page, :discontinued, :unit_name, :price, :remark, :unit, :image, :user_id, :created_at, :updated_at, :product_category_id, :cooking_category_id)
+    params.require(:product).permit(:product_name, :product_number, :page, :discontinued, :unit_name, :price, :remark, :unit, :image, :user_id, :created_at, :updated_at, :product_category_id,
+                                    :cooking_category_id)
   end
 
   def set_product

@@ -18,7 +18,8 @@ class CookingsController < ApplicationController
     @cookings_page = Cooking.page(params[:page]).per(PER)
   end
 
-  def show; end
+  def show
+  end
 
   def new
     @cooking = Cooking.new
@@ -34,30 +35,26 @@ class CookingsController < ApplicationController
   end
 
   def update
-    begin
-      @cooking.update!(cooking_params)
-      redirect_to user_path(@cooking.user_id), notice: t('msg.update', name: t('cooking', name: @cooking.cooking_name))
-    rescue ActiveRecord::RecordInvalid
-      render :edit
-    rescue
-      @cooking.errors.add(:base, t('msg.error_information', name: @cooking.cooking_name))
-      render :edit
-    end
+    @cooking.update!(cooking_params)
+    redirect_to user_path(@cooking.user_id), notice: t('msg.update', name: t('cooking', name: @cooking.cooking_name))
+  rescue ActiveRecord::RecordInvalid
+    render :edit
+  rescue StandardError
+    @cooking.errors.add(:base, t('msg.error_information', name: @cooking.cooking_name))
+    render :edit
   end
 
   def create
-    begin
-      @cooking = Cooking.new(cooking_params)
-      bp
-      @cooking.user_id = current_user.id
-      @cooking.save!
-      redirect_to user_path(@cooking.user_id), notice: t('msg.create', name: t('cooking', name: @cooking.cooking_name))
-    rescue ActiveRecord::RecordInvalid => e
-      pp e.record.errors
-      render :new
-    rescue
-      render :new
-    end
+    @cooking = Cooking.new(cooking_params)
+    bp
+    @cooking.user_id = current_user.id
+    @cooking.save!
+    redirect_to user_path(@cooking.user_id), notice: t('msg.create', name: t('cooking', name: @cooking.cooking_name))
+  rescue ActiveRecord::RecordInvalid => e
+    pp e.record.errors
+    render :new
+  rescue StandardError
+    render :new
   end
 
   def destroy

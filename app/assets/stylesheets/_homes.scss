@@ -306,18 +306,18 @@
   width: 250px;
   height: 250px;
   position: relative;
-  border-radius: 65px;
+  border-radius: 50px;
 }
 
 .restaurant {
-  background: image-url("top/restaurant.png") left top no-repeat;
+  background: image-url("top/shop.jpg") left top no-repeat;
   background-size: contain;
   width: 250px;
   height: 250px;
 }
 
 .restaurant span {
-  border-radius: 65px;
+  border-radius: 50px;
   position: absolute;
   width: 250px;
   height: 250px;
@@ -361,7 +361,7 @@
 
 .restaurant-last {
   transition: none;
-  background: image-url("top/restaurant2.jpg") left top no-repeat;
+  background: image-url("top/shop2.jpeg") left top no-repeat;
   background-size: cover;
 }
 

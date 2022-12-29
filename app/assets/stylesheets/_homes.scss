@@ -110,7 +110,6 @@
   }
 }
 
-
 .ca-icon {
   font-size: 40px;
   line-height: 60px;
@@ -168,11 +167,6 @@
   animation: fadeIn 0.8s ease 0s 1 normal;
 }
 
-@keyframes fadeIn {
-  0% {opacity: 0}
-  100% {opacity: 1}
-}
-
 .ca-menu-sab:hover {
   border: 20px solid $accent-color;
   z-index: 5;
@@ -184,9 +178,6 @@
   font-size: 60px;
   color: $accent-color;
   text-shadow: 0px 0px 1px #000;
-  -webkit-animation: moveFromBottom 300ms ease;
-  -moz-animation: moveFromBottom 300ms ease;
-  -ms-animation: moveFromBottom 300ms ease;
   font-size: 6em;
 }
 
@@ -219,6 +210,11 @@
   -webkit-animation: moveFromBottom 500ms
 }
 // ぴょこっと出るicon================================
+@keyframes fadeIn {
+  0% {opacity: 0}
+  100% {opacity: 1}
+}
+
 @-webkit-keyframes moveFromBottom {
   from {
     -webkit-transform: translateY(200%) scale(0.5);
@@ -500,7 +496,7 @@
   box-shadow: 6px 0 25px rgba(0,0,0,.15);
 }
 
-.nav-unshown {
+.nav-hide {
   display:none;
 }
 

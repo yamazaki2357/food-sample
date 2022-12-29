@@ -4,7 +4,7 @@ nav.navbar.navbar-expand-md.my-navbar.justify-content-start
     = t('catch_copy1')
     br
     = t('catch_copy2')
-  #navbarCollapse.collapse.navbar-collapse.my-subnavbar
+  #navbarCollapse.collapse.navbar-collapse.my-sub-navbar
     ul.navbar-nav.ml-auto.nav-submenus.functions
       - if user_signed_in?
         / ゲストユーザーでログインしてる時はアカウント編集を非表示にする。
@@ -31,26 +31,26 @@ nav.navbar.navbar-expand-md.my-navbar.justify-content-start
           i.fas.fa-search.nav-icon
           .nav-text
             = t('know')
-      li.nav-btn.unimplement
+      li.nav-btn.not-allowed
         = link_to ""
           i.fas.fa-utensils.nav-icon
           .nav-text
             = t('create')
-      li.nav-btn.unimplement
+      li.nav-btn.not-allowed
         = link_to ""
           i.fas.fa-shopping-cart.nav-icon
           .nav-text
             = t('buy')
-      li.nav-btn.unimplement
+      li.nav-btn.not-allowed
         = link_to ""
           i.far.fa-question-circle.nav-icon
           .nav-text
             = t('listen')
   #nav-drawer
-    input#nav-input.nav-unshown type="checkbox" /
+    input#nav-input.nav-hide type="checkbox" /
     label#nav-open for="nav-input"
       span
-    label#nav-close.nav-unshown for="nav-input"
+    label#nav-close.nav-hide for="nav-input"
     #nav-content
       = link_to image_tag("common/logo3.png"), root_url, class: "header-logo"
       h4.text-center = t('food-sample')
@@ -62,15 +62,15 @@ nav.navbar.navbar-expand-md.my-navbar.justify-content-start
         = link_to introductions_path
           i.fas.fa-search.nav-icon
           = t('know')
-      .sc-nav-btn.unimplement.nav-drawer-content
+      .sc-nav-btn.not-allowed.nav-drawer-content
         = link_to ""
           i.fas.fa-utensils.nav-icon
           = t('create')
-      .sc-nav-btn.unimplement.nav-drawer-content
+      .sc-nav-btn.not-allowed.nav-drawer-content
         = link_to ""
           i.fas.fa-shopping-cart.nav-icon
           = t('buy')
-      .sc-nav-btn.unimplement.nav-drawer-content
+      .sc-nav-btn.not-allowed.nav-drawer-content
         = link_to ""
           i.far.fa-question-circle.nav-icon
           = t('listen')

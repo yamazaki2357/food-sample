@@ -96,13 +96,14 @@ strong, .bold {
 }
 
 // 未実装用
-.unimplement * {
+.not-allowed * {
   cursor: not-allowed;
+
+  &:hover {
+    cursor: not-allowed;
+  }
 }
 
-.unimplement:hover {
-  cursor: not-allowed;
-}
 /* body ================================ */
 body {
   color: #333;
@@ -304,7 +305,7 @@ header {
   padding: 8px 0 0 0;
 }
 
-.my-subnavbar {
+.my-sub-navbar {
   flex-direction: column;
 }
 
@@ -574,9 +575,13 @@ footer .footer_inner .footer_bottom .logo {
 .main-image .inner {
   position: relative;
   height: 100%;
-  width: 85%;
+  width: 100%;
   margin: 0 auto;
   overflow: hidden;
+
+  img {
+    padding: 0 5%;
+  }
 }
 
 .footer-logo {

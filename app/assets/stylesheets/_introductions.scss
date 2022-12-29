@@ -73,7 +73,7 @@ h1.text-center {
   transform: scale(1.1, 1.1);
 }
 
-.intorduction-circle {
+.introduction-circle {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -87,7 +87,7 @@ h1.text-center {
   z-index: -1;
 }
 
-.intorduction-circle2 {
+.introduction-circle2 {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -98,13 +98,13 @@ h1.text-center {
   opacity: 0.9;
   width: 200px;
   height: 200px;
-  background: $circle-coler;
+  background: $circle-color;
   z-index: -3;
   transition: all 4s linear;
   animation: loading 10s infinite;
 }
 
-.intorduction-circle3 {
+.introduction-circle3 {
   position: absolute;
   top: 0;
   bottom: 0;
@@ -118,23 +118,23 @@ h1.text-center {
   transition: all 4s linear;
 }
 
-.sub-container .intorduction-circle3:nth-of-type(1) {
+.sub-container .introduction-circle3:nth-of-type(1) {
   animation: loading 7s infinite;
 }
-.sub-container .intorduction-circle3:nth-of-type(2) {
+.sub-container .introduction-circle3:nth-of-type(2) {
   animation: loading 8s infinite;
 }
-.sub-container .intorduction-circle3:nth-of-type(3) {
+.sub-container .introduction-circle3:nth-of-type(3) {
   animation: loading 4s infinite;
 }
-.sub-container .intorduction-circle3:nth-of-type(4) {
+.sub-container .introduction-circle3:nth-of-type(4) {
   animation: loading 5s infinite;
 }
-.sub-container .intorduction-circle3:nth-of-type(5) {
+.sub-container .introduction-circle3:nth-of-type(5) {
   animation: loading 6s infinite;
 }
 
-.intorduction-circle-inner {
+.introduction-circle-inner {
   position: absolute;
   top: 4%;
   left: 4%;
@@ -145,7 +145,7 @@ h1.text-center {
   z-index: -2;
 }
 
-.introduction-barnner {
+.introduction-banner {
   margin: 20px auto;
   text-align: center;
   width: 245px;
@@ -156,8 +156,8 @@ h1.text-center {
   box-shadow: 5px 5px 5px $sub-color;
 }
 
-.introduction-barnner > div,
-.introduction-barnner > div > a {
+.introduction-banner > div,
+.introduction-banner > div > a {
   display: block;
   width: 250px;
   height: 250px;
@@ -165,7 +165,7 @@ h1.text-center {
   border-radius: 65px;
 }
 // 食堂から飛び出す円の場所=======================================
-.intorduction-circle3 img {
+.introduction-circle3 img {
   border-radius: 50%;
   width: 30px;
   height: 30px;

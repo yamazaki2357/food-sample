@@ -1,5 +1,11 @@
+@import "definition";
+
 /* header ================================ */
 header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 30;
   display: flex;
   justify-content: space-between;
   background-color: white;
@@ -8,32 +14,44 @@ header {
   margin: 0 auto;
 
   .header-left {
+    display: flex;
+    align-items: flex-end;
 
     .header-logo img {
-      width: 80px;
-      height: 80px;
+      width: 60px;
+      height: 60px;
 
       &:hover {
         opacity: 0.7;
       }
     }
 
-    .catch-copy {
-      font-size: 21px;
-      line-height: 1.7;
-      letter-spacing: 0.05em;
+    h1.catch-copy {
+      font-size: 18px;
+      line-height: 1.2;
     }
   }
 
 }
 
 .header-right {
+  display: flex;
   flex-direction: column;
 
-  .header-btn-area {
-    border-collapse: collapse;
 
-    li.nav-btn {
+  ul.user-btn-area {
+    display: flex;
+
+    li.user-btn {
+
+        a {
+          color: black;
+        }
+      }
+  }
+  ul.content-btn-area {
+
+    li.content-btn {
       font-size: 23px;
       font-weight: bolder;
       color: $sub-color;
@@ -49,7 +67,7 @@ header {
       }
 
       a {
-        padding: 10px 22px 0 22px;
+        padding: 5px 22px 0 22px;
         overflow: hidden;
         position: relative;
         display: block;
@@ -77,6 +95,46 @@ header {
     }
   }
 }
+/* サイドバー ================================ */
+.side-menu {
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  display: flex;
+  z-index: 20;
+  background-color: #3A302D;
+  color: white;
+  cursor: pointer;
+  border-bottom-left-radius: 18px;
+  padding: 0px;
+  margin: 0px;
+  writing-mode: vertical-rl;
+  font-weight: 500;
+
+  li.user-btn {
+    letter-spacing: 0.2em;
+    border-bottom-left-radius: 18px;
+
+    a {
+      padding: 15px 3px;
+      margin: 0;
+      font-weight: normal;
+      border-bottom-left-radius: 18px;
+
+      &:hover {
+        background-color: $sub-color;
+        color: white;
+      }
+    }
+
+    &:hover {
+      background-color: $sub-color;
+      transition: 0.2s;
+    }
+  }
+}
+
+
 
 // TODO: これより下確認
 

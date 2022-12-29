@@ -1,5 +1,38 @@
 @import "definition";
 
+// * 全体================================*/
+ol, ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+
+a {
+  color: black;
+}
+
+.left {
+  margin-right: auto;
+  text-align: left;
+}
+
+.right {
+  margin-left: auto;
+  text-align: right;
+}
+
+.cooking-category-title {
+  font-size: 4em;
+  padding: 1em;
+}
+
+.not-allowed * {
+  cursor: not-allowed;
+
+  &:hover {
+    cursor: not-allowed;
+  }
+}
 /* flash ================================ */
 .flash {
   padding: 10px 0;
@@ -40,33 +73,6 @@
 
 .alert-alert {
   background-color: #f3c0c0;
-}
-/* 全体 ================================ */
-ol, ul {
-  list-style: none
-}
-
-.left {
-  margin-right: auto;
-  text-align:left;
-}
-
-.right {
-  margin-left: auto;
-  text-align:right;
-}
-
-.cooking-category-title {
-  font-size: 4em;
-  padding: 1em;
-}
-
-.not-allowed * {
-  cursor: not-allowed;
-
-  &:hover {
-    cursor: not-allowed;
-  }
 }
 
 /* body ================================ */

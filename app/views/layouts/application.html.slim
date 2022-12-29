@@ -18,10 +18,10 @@ html
 
     = favicon_link_tag 'favicon.png'
 
-  body.wf-roundedmplus1c
+  body
     - if flash.notice.present?
       = render 'shared/flash_massages'
-    = render partial: 'shared/navbar'
+    = render partial: 'shared/header'
     = render partial: 'shared/scroll_navbar'
     = yield
     #page-top

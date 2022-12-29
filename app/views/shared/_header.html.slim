@@ -1,0 +1,96 @@
+header
+  .header-left
+    = link_to image_tag("common/logo3.png"), root_url, class: "header-logo"
+    .catch-copy
+      = t('catch_copy1')
+      br
+      = t('catch_copy2')
+  .header-right
+    .header-btn-area
+      ul
+        - if user_signed_in?
+          / ゲストユーザーでログインしてる時はアカウント編集を非表示にする。
+          - if current_user.email != "guest@example.com"
+            li
+              = link_to t('account_edit'), edit_user_registration_path, class: 'btn btn-design'
+          li
+            = link_to t('logout'), destroy_user_session_path, method: :delete, class: 'btn btn-design'
+        - else
+            li
+              = link_to t('sign_up'), new_user_registration_path, class: 'btn btn-design'
+            li
+              = link_to t('login'), new_user_session_path, class: 'btn btn-design'
+            li
+              = link_to t('guest_login'), users_guest_sign_in_path, method: :post, class: 'btn btn-design'
+      ul
+        li.nav-btn
+          = link_to cookings_path
+            i.far.fa-images.nav-icon
+            .nav-text
+              = t('view')
+        li.nav-btn
+          = link_to introductions_path
+            i.fas.fa-search.nav-icon
+            .nav-text
+              = t('know')
+        li.nav-btn.not-allowed
+          = link_to ""
+            i.fas.fa-utensils.nav-icon
+            .nav-text
+              = t('create')
+        li.nav-btn.not-allowed
+          = link_to ""
+            i.fas.fa-shopping-cart.nav-icon
+            .nav-text
+              = t('buy')
+        li.nav-btn.not-allowed
+          = link_to ""
+            i.far.fa-question-circle.nav-icon
+            .nav-text
+              = t('listen')
+
+  / ハンバーガーメニュー時のナビバー
+  / TODO: 要修正
+  #nav-drawer
+    input#nav-input.nav-hide type="checkbox" /
+    label#nav-open for="nav-input"
+      span
+    label#nav-close.nav-hide for="nav-input"
+    #nav-content
+      = link_to image_tag("common/logo3.png"), root_url, class: "header-logo"
+      h4.text-center = t('food-sample')
+      .sc-nav-btn.nav-drawer-content
+        = link_to cookings_path
+          i.far.fa-images.nav-icon
+          = t('view')
+      .sc-nav-btn.nav-drawer-content
+        = link_to introductions_path
+          i.fas.fa-search.nav-icon
+          = t('know')
+      .sc-nav-btn.not-allowed.nav-drawer-content
+        = link_to ""
+          i.fas.fa-utensils.nav-icon
+          = t('create')
+      .sc-nav-btn.not-allowed.nav-drawer-content
+        = link_to ""
+          i.fas.fa-shopping-cart.nav-icon
+          = t('buy')
+      .sc-nav-btn.not-allowed.nav-drawer-content
+        = link_to ""
+          i.far.fa-question-circle.nav-icon
+          = t('listen')
+
+      - if user_signed_in?
+        / ゲストユーザーでログインしてる時はアカウント編集を非表示にする。
+        - if current_user.email != "guest@example.com"
+          .sc-nav-btn.nav-drawer-content
+            = link_to t('account_edit'), edit_user_registration_path, class: 'btn btn-design'
+        .sc-nav-btn.nav-drawer-content
+          = link_to t('logout'), destroy_user_session_path, method: :delete, class: 'btn btn-design'
+      - else
+          .sc-nav-btn.nav-drawer-content
+            = link_to t('sign_up'), new_user_registration_path, class: 'btn btn-design'
+          .sc-nav-btn.nav-drawer-content
+            = link_to t('login'), new_user_session_path, class: 'btn btn-design'
+          .sc-nav-btn.nav-drawer-content
+            = link_to t('guest_login'), users_guest_sign_in_path, method: :post, class: 'btn btn-design'

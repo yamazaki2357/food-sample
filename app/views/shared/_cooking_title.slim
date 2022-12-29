@@ -11,12 +11,12 @@
     .row
       .col-md-1
       - if user_signed_in?
-        = link_to cookings_path, class: 'nav-link btn btn-square-pop link-btn col-xs-12 col-sm-5 col-md-4 m-1'
+        = link_to cookings_path, class: 'nav-link btn btn-design link-btn col-xs-12 col-sm-5 col-md-4 m-1'
           = t('cooking_list')
-        = link_to user_path(@user.id), class: 'nav-link btn btn-square-pop link-btn col-xs-12 col-sm-3 col-md-3 m-1'
+        = link_to user_path(@user.id), class: 'nav-link btn btn-design link-btn col-xs-12 col-sm-3 col-md-3 m-1'
           - if current_user.email == "guest@example.com"
             = t('guest_posts_list')
           - else
             = t('your_posts_list')
-        = link_to new_cooking_path, class: 'nav-link btn btn-square-pop link-btn post-btn col-xs-12 col-sm-3 col-md-3 m-1'
+        = link_to new_cooking_path, class: 'nav-link btn btn-design link-btn post-btn col-xs-12 col-sm-3 col-md-3 m-1'
           = t('new_registration', v: t('cookings'))

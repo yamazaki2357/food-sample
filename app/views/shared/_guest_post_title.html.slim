@@ -8,9 +8,9 @@
   h1.mx-auto.title.pt-4.mx-3
     = t('guest_posts_list')
     .nav.justify-content-end
-      = link_to cookings_path, class: 'nav-link btn margin-custom btn-square-pop link-btn m-3'
+      = link_to cookings_path, class: 'nav-link btn margin-custom btn-design link-btn m-3'
         = t('cooking_list')
         i.far.fa-images
       - if user_signed_in?
-          = link_to new_cooking_path, class: 'nav-link btn margin-custom btn-square-pop post-btn m-3'
+          = link_to new_cooking_path, class: 'nav-link btn margin-custom btn-design post-btn m-3'
             = t('new_registration', v: t('cookings'))

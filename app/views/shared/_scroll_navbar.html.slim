@@ -1,12 +1,13 @@
+/ スマホサイズの時のナビバー
 #scroll-nav
-  nav.navbar.navbar-expand-md.sc-navbar.bg-white.fixed-top
+  nav.sc-navbar.bg-white.fixed-top
     = link_to "/", class: "sc-header-logo"
       i.fas.fa-home.sc-nav-icon
     .sc-catch-copy
       = t('catch_copy1')
       = t('food-sample')
-    #navbarCollapse.collapse.navbar-collapse.my-sub-navbar
-      .ml-auto.sc-ul.functions
+    .header-right
+      .sc-ul.header-btn-area
         li.sc-nav-btn
           = link_to cookings_path
             i.far.fa-images.nav-icon

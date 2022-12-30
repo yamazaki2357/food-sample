@@ -305,19 +305,19 @@ footer .footer_inner .footer_bottom .logo {
 }
 
 // switch=============================
-.container-custom {
+.custom-container {
   position: relative;
 }
 
-.cooking-product-switch {
+.switch-btn {
   position: absolute;
   left: 0;
   top: 0;
   display: flex;
-  z-index: 12;
+  z-index: 100;
 }
 
-.container-custom ul {
+.custom-container ul {
   padding-left: 0;
 }
 
@@ -334,8 +334,10 @@ footer .footer_inner .footer_bottom .logo {
   align-items: center;
   height: 50px;
   width: 100px;
-  padding-left: 10px;
-  background-color: #323c46;
+  padding-left: 25px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: $accent-color;
   color: #ffffff;
 }
 
@@ -366,7 +368,7 @@ footer .footer_inner .footer_bottom .logo {
   width: 20px;
   height: 100%;
   position: absolute;
-  background-color: #323c46;
+  background-color: $accent-color;
 }
 
 .switch-item a.is-current:before {
@@ -376,8 +378,8 @@ footer .footer_inner .footer_bottom .logo {
 .check-cooking {
   position: absolute;
   display: flex;
-  top: 15px;
-  left: 9px;
+  top: 14px;
+  left: 16px;
   color: white;
   font-size: 22px;
 }
@@ -385,8 +387,8 @@ footer .footer_inner .footer_bottom .logo {
 .check-food {
   position: absolute;
   display: flex;
-  top: 15px;
-  left: 110px;
+  top: 14px;
+  left: 116px;
   color: white;
   font-size: 22px;
   z-index: 2;

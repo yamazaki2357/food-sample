@@ -1,10 +1,11 @@
-#food-sample-list.container-custom
-  ul.cooking-product-switch
+.custom-container
+  ul.switch-btn
     li.switch-item
       = link_to t('cookings'), cookings_path
       .check-cooking.far.fa-check-circle
     li.switch-item
       = link_to t('products'), products_path, class: "is-current"
+
   h1.mx-auto.title.pt-4
     = t('view_food_samples')
   .justify-content-end

@@ -50,9 +50,12 @@ header
           .nav-text
             = t('listen')
 
+
+/
+
   / ハンバーガーメニュー時のナビバー
   / TODO: 要修正
-  #nav-drawer
+  / #nav-drawer
     input#nav-input.nav-hide type="checkbox" /
     label#nav-open for="nav-input"
       span
@@ -81,17 +84,17 @@ header
           i.far.fa-question-circle.nav-icon
           = t('listen')
 
-      - if user_signed_in?
-        / ゲストユーザーでログインしてる時はアカウント編集を非表示にする。
-        - if current_user.email != "guest@example.com"
-          .sc-nav-btn.nav-drawer-content
-            = link_to t('account_edit'), edit_user_registration_path, class: 'btn btn-design'
-        .sc-nav-btn.nav-drawer-content
-          = link_to t('logout'), destroy_user_session_path, method: :delete, class: 'btn btn-design'
-      - else
-          .sc-nav-btn.nav-drawer-content
-            = link_to t('sign_up'), new_user_registration_path, class: 'btn btn-design'
-          .sc-nav-btn.nav-drawer-content
-            = link_to t('login'), new_user_session_path, class: 'btn btn-design'
-          .sc-nav-btn.nav-drawer-content
-            = link_to t('guest_login'), users_guest_sign_in_path, method: :post, class: 'btn btn-design'
+      / - if user_signed_in?
+      /   / ゲストユーザーでログインしてる時はアカウント編集を非表示にする。
+      /   - if current_user.email != "guest@example.com"
+      /     .sc-nav-btn.nav-drawer-content
+      /       = link_to t('account_edit'), edit_user_registration_path, class: 'btn btn-design'
+      /   .sc-nav-btn.nav-drawer-content
+      /     = link_to t('logout'), destroy_user_session_path, method: :delete, class: 'btn btn-design'
+      / - else
+      /     .sc-nav-btn.nav-drawer-content
+      /       = link_to t('sign_up'), new_user_registration_path, class: 'btn btn-design'
+      /     .sc-nav-btn.nav-drawer-content
+      /       = link_to t('login'), new_user_session_path, class: 'btn btn-design'
+      /     .sc-nav-btn.nav-drawer-content
+      /       = link_to t('guest_login'), users_guest_sign_in_path, method: :post, class: 'btn btn-design'

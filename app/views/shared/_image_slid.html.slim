@@ -1,0 +1,84 @@
+  ul.m-header-lang
+    li.m-header-lang__item
+  .main-image
+    .inner
+      p#slideshow
+        / = link_to "", cookings_url
+        = image_tag 'top/sample1.jpg', class: 'first active'
+        = image_tag 'top/sample2.jpg'
+        = image_tag 'top/sample3.jpg'
+        = image_tag 'top/sample4.jpg'
+        = image_tag 'top/sample5.jpg', class: 'last'
+    .main_banner data-turbolinks="false"
+      .center-content
+        = link_to cooking_categories_url, class: "restaurant"
+          span.restaurant-first
+          span.left-door
+          span.right-door
+          span.restaurant-last
+        .sub-container
+          .introduction-circle3
+            .top-left-item
+              = image_tag 'top/sample1.jpg'
+          .introduction-circle3
+            .bottom-left-item
+              = image_tag 'top/sample2.jpg'
+          .introduction-circle3
+            .top-right-item
+              = image_tag 'top/sample3.jpg'
+          .introduction-circle3
+            .bottom-right-item
+              = image_tag 'top/sample4.jpg'
+  #top_global_nav
+    .ca-menu
+      ul.flex-menu
+        li.ca-menu-sab
+          = link_to cookings_path
+            .ca-icon.icon01
+              i.far.fa-images
+          .ca-content
+            h2.ca-main = t('view')
+            h3.ca-sub = t('food-sample')
+            h4.ca-main2 = t('list')
+          .circle
+            .circle-inner
+        li.ca-menu-sab.ml-10
+          = link_to introductions_path
+            .ca-icon.icon02
+              i.fas.fa-search
+          .ca-content
+            h2.ca-main = t('know')
+            h3.ca-sub = t('food-sample')
+            h4.ca-main2 = t('introduction')
+          .circle
+            .circle-inner
+        li.ca-menu-sab.not-allowed.ml-10
+          div
+            span.ca-icon.icon03
+              i.fas.fa-utensils
+          .ca-content
+            h2.ca-main = t('create')
+            h3.ca-sub = t('food-sample')
+            h4.ca-main2 = t('experience')
+          .circle
+            .circle-inner
+        li.ca-menu-sab.not-allowed.ca-right.ml-10
+          div
+            span.ca-icon.icon04
+              i.fas.fa-shopping-cart
+          .ca-content
+            h2.ca-main = t('buy')
+            h3.ca-sub = t('food-sample')
+            h4.ca-main2 = t('purchase')
+          .circle
+            .circle-inner
+        li.ca-menu-sab.not-allowed.ca-left.ml-10
+          div
+            span.ca-icon.icon05
+              i.far.fa-question-circle
+          .ca-content
+            h2.ca-main = t('listen')
+            h3.ca-sub = t('food-sample')
+            h4.ca-main2 = t('question')
+          .circle
+            .circle-inner

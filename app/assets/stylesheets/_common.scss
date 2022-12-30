@@ -9,6 +9,11 @@ ol, ul {
 
 a {
   color: black;
+
+  &:hover {
+    color: black;
+    text-decoration: none;
+  }
 }
 
 .left {
@@ -32,6 +37,10 @@ a {
   &:hover {
     cursor: not-allowed;
   }
+}
+.container {
+  text-align: center;
+  max-width: 2000px;
 }
 /* flash ================================ */
 .flash {
@@ -307,6 +316,7 @@ footer .footer_inner .footer_bottom .logo {
 // switch=============================
 .custom-container {
   position: relative;
+  padding: 40px 0;
 
   ul {
     padding-left: 0;
@@ -315,10 +325,9 @@ footer .footer_inner .footer_bottom .logo {
 
 .switch-btn {
   position: absolute;
-  left: 0;
   top: 0;
+  margin-left: 2%;
   display: flex;
-  z-index: 100;
 
   .switch-item {
     a {

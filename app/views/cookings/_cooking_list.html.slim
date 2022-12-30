@@ -1,19 +1,17 @@
-.container
-  .row
-    / TODO:トップページに名称指定で載せいていたもの。今は値が入っていない。
-    - @cooking_category_various.each do |cooking|
-      .col-xs-12.col-sm-6.col-md-3
-        = link_to cooking
-          .card
-            .ribbon.ribbon-top-right
-              / 文字数がリボン内に収めるため文字数表示の条件分岐
-              - if cooking.cooking_category.classification_name == t('cafe_and_sweets')
-                span = t('sweets')
-              - else
-                span = cooking.cooking_category.classification_name
-            .card-top
-              .card-title
-                = cooking.cooking_name
-            .img-body-co
-              .card-img-top
-                = image_tag cooking.image if cooking.image.attached?
+.cooking-contents-area
+  - @cooking_category_various.each do |cooking|
+    .cooking-content
+      = link_to cooking
+        .card
+          .ribbon.ribbon-top-right
+            / 文字数がリボン内に収めるため文字数表示の条件分岐
+            - if cooking.cooking_category.classification_name == t('cafe_and_sweets')
+              span = t('sweets')
+            - else
+              span = cooking.cooking_category.classification_name
+          .card-top
+            .card-title
+              = cooking.cooking_name
+          .img-body-co
+            .card-img-top
+              = image_tag cooking.image if cooking.image.attached?

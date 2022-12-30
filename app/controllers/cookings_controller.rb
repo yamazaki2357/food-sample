@@ -46,7 +46,6 @@ class CookingsController < ApplicationController
 
   def create
     @cooking = Cooking.new(cooking_params)
-    bp
     @cooking.user_id = current_user.id
     @cooking.save!
     redirect_to user_path(@cooking.user_id), notice: t('msg.create', name: t('cooking', name: @cooking.cooking_name))

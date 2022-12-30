@@ -5,8 +5,8 @@
     li.switch-item
       = link_to t('products'), products_path
       .check-food.far.fa-check-circle
-  h1.mx-auto.title.pt-4
-    = t('view_product')
+
+  h1 = t('view_product')
   - if user_signed_in? && current_user.admin?
     .nav.justify-content-end
       = link_to new_product_path, class: 'nav-link btn margin-custom btn-design link-btn m-3'

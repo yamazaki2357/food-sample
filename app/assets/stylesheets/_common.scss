@@ -307,6 +307,10 @@ footer .footer_inner .footer_bottom .logo {
 // switch=============================
 .custom-container {
   position: relative;
+
+  ul {
+    padding-left: 0;
+  }
 }
 
 .switch-btn {
@@ -315,88 +319,83 @@ footer .footer_inner .footer_bottom .logo {
   top: 0;
   display: flex;
   z-index: 100;
-}
 
-.custom-container ul {
-  padding-left: 0;
-}
+  .switch-item {
+    a {
+      font-size: 1.4em;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 50px;
+      width: 100px;
+      padding-left: 25px;
+      border-top-left-radius: 10px;
+      border-bottom-left-radius: 10px;
+      background-color: $accent-color;
+      color: #ffffff;
 
-.switch-item a.is-current {
-  background-color: $sub-color;
-  color: #323c46;
-}
+      &:before {
+        content: "";
+        width: 20px;
+        height: 100%;
+        position: absolute;
+        background-color: $accent-color;
+      }
+    }
 
-.switch-item a {
-  font-size: 1.4em;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  width: 100px;
-  padding-left: 25px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-  background-color: $accent-color;
-  color: #ffffff;
-}
+    a.is-current {
+      background-color: $sub-color;
+      color: #323c46;
 
-.switch-item:hover .is-current {
-  box-shadow: 3px 3px #615a5a;
-  font-size: 20px;
-  font-weight: bold;
-}
+      &:before {
+        background-color: $sub-color;
+      }
+    }
 
-.switch-item:nth-of-type(1) a:before {
-  right: 0;
-  top: 0;
-  transform: translateX(90%) skew(-20deg);
-  transform-origin: 0 0;
-  z-index: 1;
-}
+    &:hover .is-current {
+      box-shadow: 3px 3px #615a5a;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    &:nth-of-type(1) a:before {
+      right: 0;
+      top: 0;
+      transform: translateX(90%) skew(-20deg);
+      transform-origin: 0 0;
+      z-index: 1;
+    }
+    &:nth-of-type(2) a:before {
+      left: 0;
+      bottom: 0;
+      transform: translateX(50%) skew(-20deg);
+      transform-origin: 0 0;
+      z-index: 2;
+    }
 
-.switch-item:nth-of-type(2) a:before {
-  left: 0;
-  bottom: 0;
-  transform: translateX(50%) skew(-20deg);
-  transform-origin: 0 0;
-  z-index: 2;
-}
+    .check-cooking {
+      position: absolute;
+      display: flex;
+      top: 14px;
+      left: 16px;
+      color: white;
+      font-size: 22px;
+    }
+    .check-food {
+      position: absolute;
+      display: flex;
+      top: 14px;
+      left: 116px;
+      color: white;
+      font-size: 22px;
+      z-index: 2;
+    }
 
-.switch-item a:before {
-  content: "";
-  width: 20px;
-  height: 100%;
-  position: absolute;
-  background-color: $accent-color;
-}
-
-.switch-item a.is-current:before {
-    background-color: $sub-color;
-}
-
-.check-cooking {
-  position: absolute;
-  display: flex;
-  top: 14px;
-  left: 16px;
-  color: white;
-  font-size: 22px;
-}
-
-.check-food {
-  position: absolute;
-  display: flex;
-  top: 14px;
-  left: 116px;
-  color: white;
-  font-size: 22px;
-  z-index: 2;
-}
-
-.switch-item:hover .check-cooking,
-.switch-item:hover .check-food {
-  color: $accent-color;
+    &:hover .check-cooking,
+    &:hover .check-food {
+      color: $accent-color;
+    }
+  }
 }
 // ribbon =====================
 

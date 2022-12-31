@@ -3,6 +3,23 @@
 // TODO: sassに書き直す
 
 // トップ画 =============================================
+.copyright {
+  font-size: 0.5625rem;
+  letter-spacing: 5px;
+}
+
+.main-image .inner {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+
+  img {
+    padding: 0 5%;
+  }
+}
+
 .main-image {
   position: relative;
   max-width: 2000px;

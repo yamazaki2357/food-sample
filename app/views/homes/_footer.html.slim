@@ -1,78 +1,54 @@
-.footer_inner.my-footer#footer
-  .footer_nav01
-    .inner
-      ul.list
-        li
-          h2
-            = link_to cookings_path
-              = t('food-sample')
-              strong = t('list')
-              i.far.fa-images
-          ul.sub_list
-            li = link_to cooking_category_path(1)
-              = t('Japanese-food')
-            li = link_to cooking_category_path(2)
-              = t('Western-food')
-            li = link_to cooking_category_path(3)
-              = t('Chinese-food')
-            li = link_to cooking_category_path(4)
-              = t('Ethnic')
-            li = link_to cooking_category_path(5)
-              = t('Asian-food')
-            li = link_to cooking_category_path(6)
-              = t('cafe_and_sweets')
-            li = link_to cooking_category_path(7)
-              = t('confection')
-            li = link_to cooking_category_path(8)
-              = t('Craftsmanship')
-        li
-          h2
-            = link_to introductions_path
-              = t('food-sample')
-              strong = t('introduction')
-              i.fas.fa-search
-          ul.sub_list
-            li = link_to introductions_path
-              = t('How-to-make')
-        li
-          h2
-            .not-allowed= link_to "#footer"
-              = t('food-sample')
-              strong = t('experience')
-              i.fas.fa-utensils
-          ul.sub_list.not-allowed
-            li = link_to "#footer"
-              = t('Food-sample-experience')
-            li = link_to "#footer"
-              = t('Upcoming-events')
-            li = link_to "#footer"
-              = t('Past-events')
-        li
-          h2
-            .not-allowed= link_to "#footer"
-              = t('food-sample')
-              strong = t('purchase')
-              i.fas.fa-shopping-cart
-          ul.sub_list.not-allowed
-            li = link_to "#footer"
-              = t('online-shop')
-        li
-          h2
-            .not-allowed= link_to "#footer"
-              = t('food-sample')
-              strong = t('question')
-              i.far.fa-question-circle
-          ul.sub_list.not-allowed
-            li = link_to "#footer"
-              = t('Frequently-Asked-Questions')
-            li = link_to "#footer"
-              =t('Contact-Us')
+footer
+  .footer-inner
+    .footer-list
+      = link_to cookings_path
+        = t('food-sample')
+        strong = t('list')
+        i.far.fa-images
+      ul
+        li = t('Japanese-food')
+        li = t('Western-food')
+        li = t('Chinese-food')
+        li = t('Ethnic')
+        li = t('Asian-food')
+        li = t('cafe_and_sweets')
+        li = t('confection')
+        li = t('Craftsmanship')
+    .footer-list
+      = link_to introductions_path
+        = t('food-sample')
+        strong = t('introduction')
+        i.fas.fa-search
+      ul
+        li = t('How-to-make')
+
+    .footer-list.not-allowed
+      = link_to introductions_path
+        = t('food-sample')
+        strong = t('experience')
+        i.fas.fa-utensils
+      ul.not-allowed
+        li = t('Food-sample-experience')
+        li = t('Upcoming-events')
+        li = t('Past-events')
+    .footer-list.not-allowed
+      = link_to introductions_path
+        = t('food-sample')
+        strong = t('purchase')
+        i.fas.fa-shopping-cart
+      ul.not-allowed
+        li = t('online-shop')
+    .footer-list.not-allowed
+      = link_to introductions_path
+        = t('food-sample')
+        strong = t('question')
+        i.far.fa-question-circle
+      ul.not-allowed
+        li = t('Frequently-Asked-Questions')
+        li = t('Contact-Us')
   hr
-  .footer_bottom
-    .navbar-brand.footer_logo
-    = link_to ""
+  .footer-logo-area
+    = link_to "/"
       = image_tag 'common/logo2.png', class: 'footer-logo'
-      p.copyright
-        = t('catch_copy1')
-        br
-        = t('catch_copy2')
+      p = t('catch_copy1')
+      p = t('catch_copy2')

@@ -26,9 +26,13 @@ header {
       }
     }
 
-    h1.catch-copy {
+    a.catch-copy {
       font-size: 18px;
       line-height: 1.2;
+
+      &:hover {
+        font-weight: 600;
+      }
     }
   }
 

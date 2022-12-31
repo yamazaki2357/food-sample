@@ -24,8 +24,6 @@ html
     = render partial: 'shared/header'
     / = render partial: 'shared/scroll_navbar'
     = yield
-    #page-top
-      = link_to ""
-        i.fas.fa-angle-up.page-top-icon
+    = render partial: 'shared/scroll_btn'
     footer
       = render partial: 'homes/footer'

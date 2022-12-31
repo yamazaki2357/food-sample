@@ -1,33 +1,27 @@
 
-$(document).ready( function(){
-// ページ読み込み時に実行する処理
+$(document).ready(function() {
   console.log("home.jsを読み込んでいます！");
-});
 
-$(document).on(function () {
-  var $pagetop = $('#page-top');
-  var $navbar = $('#scroll-nav');
-  $pagetop.hide();
-  $navbar.hide();
+  var $scrollBtn = $('#scroll-btn');
+  // var $navbar = $('#scroll-nav');
+  $scrollBtn.hide();
+  // $navbar.hide();
 
-  $pagetop.click(function () {
-    $('body,html').animate(
-      {
-        scrollTop: 0,
-      },
-      500
-    );
-    return false;
+  $scrollBtn.click(function() {
+    $('html, body').animate({
+      'scrollTop': '0'
+    }, 300);
   });
 
   $(window).scroll(function () {
-    if ($(this).scrollTop() <= 115) {
-      $navbar.hide();
-    } else if ($(this).scrollTop() <= 1000) {
-      $navbar.show();
-      $pagetop.fadeOut();
+    if ($(this).scrollTop() <= 100) {
+      // $navbar.hide();
+      $scrollBtn.hide();
+    // } else if ($(this).scrollTop() <= 1000) {
+      // $navbar.show();
+      $scrollBtn.fadeOut();
     } else {
-      $pagetop.fadeIn();
+      $scrollBtn.fadeIn();
     }
   });
 });

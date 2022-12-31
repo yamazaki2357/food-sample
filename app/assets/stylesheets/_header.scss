@@ -12,91 +12,86 @@ header {
   padding: 0 5%;
   max-width: 2000px;
   margin: 0 auto;
+}
 
-  .header-left {
-    display: flex;
-    align-items: center;
+.header-left {
+  display: flex;
+  align-items: center;
 
-    .header-logo img {
-      width: 60px;
-      height: 60px;
+  .header-logo img {
+    width: 60px;
+    height: 60px;
 
-      &:hover {
-        opacity: 0.7;
-      }
-    }
-
-    a.catch-copy {
-      font-size: 18px;
-      line-height: 1.2;
-
-      &:hover {
-        font-weight: 600;
-      }
+    &:hover {
+      opacity: 0.7;
     }
   }
 
+  a.catch-copy {
+    font-size: 18px;
+    line-height: 1.2;
+
+    &:hover {
+      font-weight: 600;
+    }
+  }
 }
 
 .header-right {
   display: flex;
   flex-direction: column;
+}
 
+.user-btn-area {
+  display: flex;
 
-  ul.user-btn-area {
-    display: flex;
-
-    li.user-btn {
-
-        a {
-          color: black;
-        }
-      }
-  }
-  ul.content-btn-area {
-
-    li.content-btn {
-      font-size: 23px;
-      font-weight: bolder;
-      color: $sub-color;
-      border-left: 1px solid #e6e6e6;
-      border-right: 1px solid #e6e6e6;
-      display: table-cell;
-      width: 70px;
-
-      .nav-icon {
-        color: $sub-color;
-        font-size: 25px;
-        width: 50px;
-      }
-
-      a {
-        padding: 5px 22px 0 22px;
-        overflow: hidden;
-        position: relative;
-        display: block;
-        line-height: 0.8;
-        text-align: center;
-        text-decoration: none;
-        white-space: nowrap;
-        box-sizing: border-box;
-      }
-
-      .nav-text {
-        font-size: 15px;
-        font-weight: initial;
-        line-height: 2;
-      }
-
-      &:hover {
-        background-color: $sub-color;
-      }
-
-      &:hover .nav-icon,
-      &:hover .nav-text {
-        color: white;
-      }
+  li.user-btn {
+    a {
+      color: black;
     }
+  }
+}
+
+.content-btn {
+  font-size: 23px;
+  font-weight: bolder;
+  color: $sub-color;
+  border-left: 1px solid #e6e6e6;
+  border-right: 1px solid #e6e6e6;
+  display: table-cell;
+  width: 70px;
+
+  .nav-icon {
+    color: $sub-color;
+    font-size: 25px;
+    width: 50px;
+  }
+
+  a {
+    padding: 5px 22px 0 22px;
+    overflow: hidden;
+    position: relative;
+    display: block;
+    line-height: 0.8;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    box-sizing: border-box;
+  }
+
+  .nav-text {
+    font-size: 15px;
+    font-weight: initial;
+    line-height: 2;
+  }
+
+  &:hover {
+    background-color: $sub-color;
+  }
+
+  &:hover .nav-icon,
+  &:hover .nav-text {
+    color: white;
   }
 }
 /* サイドバー ================================ */
@@ -114,26 +109,26 @@ header {
   margin: 0px;
   writing-mode: vertical-rl;
   font-weight: 500;
+}
 
-  li.user-btn {
-    letter-spacing: 0.2em;
-    border-bottom-left-radius: 18px;
+.user-btn {
+  letter-spacing: 0.2em;
+  border-bottom-left-radius: 18px;
 
-    a {
-      padding: 15px 3px;
-      margin: 0;
-      font-weight: normal;
-      border-bottom-left-radius: 18px;
-
-      &:hover {
-        background-color: $sub-color;
-        color: white;
-      }
+  &:hover {
+      background-color: $sub-color;
+      transition: 0.2s;
     }
+
+  a {
+    padding: 15px 3px;
+    margin: 0;
+    font-weight: normal;
+    border-bottom-left-radius: 18px;
 
     &:hover {
       background-color: $sub-color;
-      transition: 0.2s;
+      color: white;
     }
   }
 }
@@ -142,7 +137,7 @@ header {
 
 // TODO: これより下確認
 
-
+/* ================================ */
 .m-header-lang__item {
   font-weight: initial;
 }

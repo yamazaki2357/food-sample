@@ -201,72 +201,77 @@ footer {
     justify-content: space-evenly;
     padding-bottom: 15px;
     margin: 0 5%;
+  }
+}
 
-    .footer-list {
-      padding-bottom: 5px;
+.footer-list {
+  padding-bottom: 5px;
 
-      a {
-        font-size: 12px;
+  a {
+    font-size: 12px;
 
-        strong {
-          font-size: 14px;
-        }
-        i {
-          margin-left: 5px;
-        }
-        &:hover {
-          font-weight: 550;
-        }
-      }
-      ul {
-        li {
-          font-size: 8px;
-          padding-left: 5px;
-        }
-      }
+    strong {
+      font-size: 14px;
+    }
+
+    i {
+      margin-left: 5px;
+    }
+
+    &:hover {
+      font-weight: 550;
     }
   }
-  hr {
-    border-top: 1px solid $sub-color;
-    border-bottom: 1px solid $accent-color;
-    margin: 0px;
 
-    &:after {
-      content: '';
-      display: block;
-      margin-top: 2px;
-      border-top: 1px solid $sub-color;
-      border-bottom: 1px solid $accent-color;
-    }
-  }
-  .footer-logo-area {
-    display: flex;
-    padding: 0px 0 0px 5%;
-    a {
-      width: 200px;
-
-      .footer-logo {
-        float: left;
-        width: 60px;
-        height: 60px;
-
-        &:hover {
-          opacity: 0.7;
-        }
-      }
-
-      p {
-        margin: 0px;
-        padding-top: 8px;
-      }
-
-      &:hover {
-        font-weight: 550;
-      }
+  ul {
+    li {
+      font-size: 8px;
+      padding-left: 5px;
     }
   }
 }
 
+.footer-border {
+  border-top: 1px solid $sub-color;
+  border-bottom: 1px solid $accent-color;
+  margin: 0px;
+
+  &:after {
+    content: '';
+    display: block;
+    margin-top: 2px;
+    border-top: 1px solid $sub-color;
+    border-bottom: 1px solid $accent-color;
+  }
+}
+
+.footer-logo-area {
+  display: flex;
+  padding: 0px 0 0px 5%;
+
+  a {
+    width: 200px;
+
+    .footer-logo {
+      float: left;
+      width: 60px;
+      height: 60px;
+
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+
+    p {
+      margin: 0px;
+      padding-top: 8px;
+    }
+
+    &:hover {
+      font-weight: 550;
+    }
+  }
+}
 // switch=============================
 .custom-container {
   position: relative;
@@ -285,82 +290,86 @@ footer {
   width: 250px;
   justify-content: center;
 
-  .switch-item {
-    width: 50%;
-    a {
-      font-size: 1.4em;
-      position: relative;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 50px;
-      padding-left: 25px;
-      border-top-left-radius: 10px;
-      border-bottom-left-radius: 10px;
+}
+
+.switch-item {
+  width: 50%;
+
+  a {
+    font-size: 1.4em;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    padding-left: 25px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-color: $accent-color;
+    color: #ffffff;
+
+    &:before {
+      content: "";
+      width: 20px;
+      height: 100%;
+      position: absolute;
       background-color: $accent-color;
-      color: #ffffff;
-
-      &:before {
-        content: "";
-        width: 20px;
-        height: 100%;
-        position: absolute;
-        background-color: $accent-color;
-      }
-    }
-
-    a.is-current {
-      background-color: $sub-color;
-      color: #323c46;
-
-      &:before {
-        background-color: $sub-color;
-      }
-    }
-
-    &:hover .is-current {
-      box-shadow: 3px 3px #615a5a;
-      font-weight: bold;
-    }
-    &:nth-of-type(1) a:before {
-      right: 0;
-      top: 0;
-      transform: translateX(90%) skew(-20deg);
-      transform-origin: 0 0;
-      z-index: 1;
-    }
-    &:nth-of-type(2) a:before {
-      left: 0;
-      bottom: 0;
-      transform: translateX(50%) skew(-20deg);
-      transform-origin: 0 0;
-      z-index: 2;
-    }
-
-    .check-cooking {
-      position: absolute;
-      display: flex;
-      top: 13px;
-      left: 11px;
-      color: white;
-      font-size: 22px;
-    }
-    .check-food {
-      position: absolute;
-      display: flex;
-      top: 13px;
-      left: 136px;
-      color: white;
-      font-size: 22px;
-      z-index: 2;
-    }
-
-    &:hover .check-cooking,
-    &:hover .check-food {
-      color: $accent-color;
     }
   }
+
+  a.is-current {
+    background-color: $sub-color;
+    color: #323c46;
+
+    &:before {
+      background-color: $sub-color;
+    }
+  }
+
+  &:hover .is-current {
+    box-shadow: 3px 3px #615a5a;
+    font-weight: bold;
+  }
+  &:nth-of-type(1) a:before {
+    right: 0;
+    top: 0;
+    transform: translateX(90%) skew(-20deg);
+    transform-origin: 0 0;
+    z-index: 1;
+  }
+  &:nth-of-type(2) a:before {
+    left: 0;
+    bottom: 0;
+    transform: translateX(50%) skew(-20deg);
+    transform-origin: 0 0;
+    z-index: 2;
+  }
 }
+
+.check-cooking {
+  position: absolute;
+  display: flex;
+  top: 13px;
+  left: 11px;
+  color: white;
+  font-size: 22px;
+}
+
+.check-food {
+  position: absolute;
+  display: flex;
+  top: 13px;
+  left: 136px;
+  color: white;
+  font-size: 22px;
+  z-index: 2;
+}
+
+a:hover .check-cooking,
+a:hover .check-food {
+  color: $accent-color;
+}
+
 // ribbon =====================
 
 .ribbon {

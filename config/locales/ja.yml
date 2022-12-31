@@ -14,6 +14,7 @@ ja:
   cookings: 料理
   cooking_name: 料理名
   cooking_list: 食品サンプル料理一覧
+  cooking_switch: 料理一覧
   view_food_samples: 食品サンプルを見る
   cooking_update: 料理更新
   created_at: 作成日
@@ -21,6 +22,7 @@ ja:
 
   product_name: 品名
   product_number: 品番
+  products_switch: 食材一覧
   page: ページ
   classification: 料理分類
   product_classification: 食材分類

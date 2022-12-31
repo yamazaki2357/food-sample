@@ -332,8 +332,11 @@ footer .footer_inner .footer_bottom .logo {
   top: 0;
   margin-left: 2%;
   display: flex;
+  width: 250px;
+  justify-content: center;
 
   .switch-item {
+    width: 50%;
     a {
       font-size: 1.4em;
       position: relative;
@@ -341,7 +344,6 @@ footer .footer_inner .footer_bottom .logo {
       justify-content: center;
       align-items: center;
       height: 50px;
-      width: 100px;
       padding-left: 25px;
       border-top-left-radius: 10px;
       border-bottom-left-radius: 10px;
@@ -368,7 +370,6 @@ footer .footer_inner .footer_bottom .logo {
 
     &:hover .is-current {
       box-shadow: 3px 3px #615a5a;
-      font-size: 20px;
       font-weight: bold;
     }
     &:nth-of-type(1) a:before {
@@ -389,16 +390,16 @@ footer .footer_inner .footer_bottom .logo {
     .check-cooking {
       position: absolute;
       display: flex;
-      top: 14px;
-      left: 16px;
+      top: 13px;
+      left: 11px;
       color: white;
       font-size: 22px;
     }
     .check-food {
       position: absolute;
       display: flex;
-      top: 14px;
-      left: 116px;
+      top: 13px;
+      left: 136px;
       color: white;
       font-size: 22px;
       z-index: 2;

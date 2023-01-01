@@ -1,10 +1,14 @@
 @import "definition";
 
-// 区切り線と画像の設定======================
-.contents {
-  max-width: 100%;
-  background-color: #f8faed;
+.cooking-recipe {
+  overflow: hidden;
+  height: 100vh;
+  background: image-url("introduction/background-image-large.png");
+  background-size: cover;
 }
+
+
+// 区切り線と画像の設定======================
 
 .introduction-img {
   position: absolute;
@@ -13,14 +17,15 @@
   margin: auto;
   object-fit: cover;
   z-index: 10;
+
+  img{
+    border-radius: 50%;
+    max-width: 400px;
+    max-height: 400px;
+    box-shadow: 0px 0px 20px 1px white;
+  }
 }
 
-.introduction-img img{
-  border-radius: 50%;
-  max-width: 400px;
-  max-height: 400px;
-  box-shadow: 0px 0px 20px 1px white;
-}
 
 .section-bubble11 .introduction-img img {
   max-width: 650px;
@@ -181,8 +186,9 @@
 .section-bubble {
   margin: -1px 0 20vw 0;;
   position: relative;
-  &:after
-  {
+  padding-bottom: 48px;
+
+  &:after {
     content: '';
     position: absolute;
     bottom: 0;
@@ -259,6 +265,7 @@
 }
 
 // 画像をスクロールでフェードイン=======================
+
 .fadein {
 	opacity: 0;
 	transform: translate(0, -150px);

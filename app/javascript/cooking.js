@@ -1,19 +1,19 @@
-$(document).on('turbolinks:load', function () {
-  console.log('cooking.jsを読み込んでいます');
+$(document).on("turbolinks:load", function () {
+  console.log("cooking.jsを読み込んでいます");
 
   // クリックすると画面を拡大表示する
-  $(".imgArea img").on('click', function () {
+  $(".img-area img").on("click", function () {
     $("#gray-display").html($(this).prop("outerHTML"));
     $("#gray-display").fadeIn(200);
   });
 
-  $("#gray-display, #gray-display img").on('click', function () {
+  $("#gray-display, #gray-display img").on("click", function () {
     $("#gray-display").fadeOut(200);
   });
 
   // ドロップボックスに応じたチェックボックスを生成する
   function generate_checkbox(productClassification) {
-    console.log('generate_checkboxが呼び出されました。');
+    console.log("generate_checkboxが呼び出されました。");
     // IDを元に選択したドロップボックスに該当するチェックボックスを配列として取得
     $.ajax({
       type: "GET",
@@ -51,7 +51,7 @@ $(document).on('turbolinks:load', function () {
       .fail(function () {
         console.log("失敗");
       });
-  };
+  }
 
   $(document).ready(function () {
     // ドロップダウンがある画面だったらチェックボックス生成等一連の処理をする
@@ -59,7 +59,9 @@ $(document).on('turbolinks:load', function () {
       for (let i = 1; i < 29; i++) {
         generate_checkbox(i);
       }
-      let productClassification = $("#select_pro_category").val(); /*食材分類ID取得*/
+      let productClassification = $(
+        "#select_pro_category"
+      ).val(); /*食材分類ID取得*/
       $(`#form_check_box_list${productClassification}`).show();
 
       // 読み込み時チェックの入っているものを配列に追加する
@@ -68,12 +70,14 @@ $(document).on('turbolinks:load', function () {
       });
 
       $("#span").text(productCheck);
-    };
+    }
   });
 
-// =================================================================
+  // =================================================================
   $("#select_pro_category").change(function () {
-    let productClassification = $("#select_pro_category").val(); /*食材分類ID取得*/
+    let productClassification = $(
+      "#select_pro_category"
+    ).val(); /*食材分類ID取得*/
     for (let t = 1; t < 29; t++) {
       if (productClassification == t) {
         $(`#form_check_box_list${productClassification}`).show();
@@ -83,7 +87,7 @@ $(document).on('turbolinks:load', function () {
       }
     }
   });
-// ================================================================
+  // ================================================================
   // チェックを入れた内容を一覧表示
   let productCheck = [];
   $(document).on("change", ".checkbox-input", function () {
@@ -110,55 +114,60 @@ $(document).on('turbolinks:load', function () {
     $("#span").text(productCheck);
   });
 
+  $(function () {
+    $(".directUpload")
+      .find("input:file")
+      .each(function (i, elem) {
+        var fileInput = $(elem);
+        var form = $(fileInput.parents("form:first"));
+        var submitButton = form.find('input[type="submit"]');
+        var progressBar = $("<div class='bar'></div>");
+        var barContainer = $("<div class='progress'></div>").append(
+          progressBar
+        );
+        fileInput.after(barContainer);
+        fileInput.fileupload({
+          fileInput: fileInput,
+          url: form.data("url"),
+          type: "POST",
+          autoUpload: true,
+          formData: form.data("form-data"),
+          paramName: "file",
+          dataType: "XML",
+          replaceFileInput: false,
+          progressall: function (e, data) {
+            var progress = parseInt((data.loaded / data.total) * 100, 10);
+            progressBar.css("width", progress + "%");
+          },
+          start: function (e) {
+            submitButton.prop("disabled", true);
 
-  $(function() {
-    $('.directUpload').find("input:file").each(function (i, elem) {
-      var fileInput = $(elem);
-      var form = $(fileInput.parents('form:first'));
-      var submitButton = form.find('input[type="submit"]');
-      var progressBar = $("<div class='bar'></div>");
-      var barContainer = $("<div class='progress'></div>").append(progressBar);
-      fileInput.after(barContainer);
-      fileInput.fileupload({
-        fileInput: fileInput,
-        url: form.data('url'),
-        type: 'POST',
-        autoUpload: true,
-        formData: form.data('form-data'),
-        paramName: 'file',
-        dataType: 'XML',
-        replaceFileInput: false,
-        progressall: function (e, data) {
-          var progress = parseInt(data.loaded / data.total * 100, 10);
-          progressBar.css('width', progress + '%')
-        },
-        start: function (e) {
-          submitButton.prop('disabled', true);
+            progressBar
+              .css("background", "green")
+              .css("display", "block")
+              .css("width", "0%")
+              .text("Loading...");
+          },
+          done: function (e, data) {
+            submitButton.prop("disabled", false);
+            progressBar.text("Uploading done");
 
-          progressBar.
-            css('background', 'green').
-            css('display', 'block').
-            css('width', '0%').
-            text("Loading...");
-        },
-        done: function (e, data) {
-          submitButton.prop('disabled', false);
-          progressBar.text("Uploading done");
+            var key = $(data.jqXHR.responseXML).find("Key").text();
+            var url = "//" + form.data("host") + "/" + key;
 
-          var key = $(data.jqXHR.responseXML).find("Key").text();
-          var url = '//' + form.data('host') + '/' + key;
+            var input = $("<input />", {
+              type: "hidden",
+              name: fileInput.attr("name"),
+              value: url,
+            });
+            form.append(input);
+          },
+          fail: function (e, data) {
+            submitButton.prop("disabled", false);
 
-          var input = $("<input />", { type: 'hidden', name: fileInput.attr('name'), value: url })
-          form.append(input);
-        },
-        fail: function (e, data) {
-          submitButton.prop('disabled', false);
-
-          progressBar.
-            css("background", "red").
-            text("Failed");
-        }
+            progressBar.css("background", "red").text("Failed");
+          },
+        });
       });
-    });
   });
 });

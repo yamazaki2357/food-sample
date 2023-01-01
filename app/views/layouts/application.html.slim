@@ -22,7 +22,7 @@ html
     - if flash.notice.present?
       = render 'shared/flash_massages'
     = render partial: 'shared/header'
-    / = render partial: 'shared/scroll_navbar'
+    = render partial: 'shared/scroll_navbar'
     = yield
     = render partial: 'shared/scroll_btn'
     = render partial: 'homes/footer'

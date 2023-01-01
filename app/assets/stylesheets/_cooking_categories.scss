@@ -37,18 +37,18 @@
   margin-bottom: 50px;
 }
 
-.itemWrap .imgArea {
+.itemWrap .img-area {
   max-height: 100%;
   max-width: 100%;
 }
 
-.itemWrap .imgArea img {
+.itemWrap .img-area img {
   max-width: 100%;
   max-height: 100%;
   cursor: pointer;
 }
 
-.itemWrap .imgArea img:hover {
+.itemWrap .img-area img:hover {
   transition: 0.3s ease-out;
   transform: scale(1.01, 1.01);
 }

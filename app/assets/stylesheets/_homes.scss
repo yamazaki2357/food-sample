@@ -551,3 +551,31 @@
 #nav-content h4 {
   padding: 38px 5px 38px 0px;
 }
+
+// 食堂から飛び出す円の場所=======================================
+.introduction-circle3 img {
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+
+.top-left-item {
+  position: absolute;
+  top: 0;
+}
+
+.bottom-left-item {
+  position: absolute;
+  bottom: 0;
+}
+
+.top-right-item {
+  position: absolute;
+  right: 0;
+}
+
+.bottom-right-item {
+  position: absolute;
+  right: 0;
+  bottom: 50%;
+}

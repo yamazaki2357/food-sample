@@ -1,16 +1,6 @@
 @import "definition";
 
 // 区切り線と画像の設定======================
-.text-center {
-  margin: 0;
-  padding: 20px;
-}
-
-h1.text-center {
-  background: $sub-color;
-  padding-bottom: 40px;
-}
-
 .contents {
   max-width: 100%;
   background-color: #f8faed;
@@ -164,34 +154,6 @@ h1.text-center {
   position: relative;
   border-radius: 65px;
 }
-// 食堂から飛び出す円の場所=======================================
-.introduction-circle3 img {
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-}
-
-.top-left-item {
-  position: absolute;
-  top: 0;
-}
-
-.bottom-left-item {
-  position: absolute;
-  bottom: 0;
-}
-
-.top-right-item {
-  position: absolute;
-  right: 0;
-}
-
-.bottom-right-item {
-  position: absolute;
-  right: 0;
-  bottom: 50%;
-}
-
 // 波区切り線==================================
 
 @mixin bubbles($bubbles-type, $color) {

@@ -46,6 +46,17 @@ a {
   text-align: center;
   max-width: 2000px;
 }
+
+.text-center {
+  margin: 0;
+  padding: 20px;
+}
+
+h1.text-center {
+  background: $sub-color;
+  padding-bottom: 40px;
+}
+
 /* flash ================================ */
 .flash {
   padding: 10px 0;

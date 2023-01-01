@@ -424,8 +424,6 @@
   }
 }
 
-
-
 // cooking_link============================
 .home-title {
   font-size: 30px;
@@ -550,29 +548,66 @@
 }
 
 // 食堂から飛び出す円の場所=======================================
-.introduction-circle3 img {
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
+.sub-container {
+  position: relative;
+  max-width: 100%;
+  text-align: center;
+
+  img {
+    width: 50%;
+    opacity: 1;
+
+    &:hover {
+      transition: 0.3s ease-out;
+      transform: scale(1.1, 1.1);
+    }
+  }
 }
 
-.top-left-item {
+.introduction-circle3 {
   position: absolute;
   top: 0;
-}
-
-.bottom-left-item {
-  position: absolute;
   bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  z-index: -3;
+  transition: all 4s linear;
+
+  img {
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+  }
 }
 
-.top-right-item {
-  position: absolute;
-  right: 0;
-}
+.introduction-circle3 {
+  // 円が出るタイミングをずらしている
+  &:nth-of-type(1) { animation: loading 7s infinite; }
+  &:nth-of-type(2) { animation: loading 8s infinite; }
+  &:nth-of-type(3) { animation: loading 4s infinite; }
+  &:nth-of-type(4) { animation: loading 5s infinite; }
+  &:nth-of-type(5) { animation: loading 6s infinite; }
 
-.bottom-right-item {
-  position: absolute;
-  right: 0;
-  bottom: 50%;
+  // 円が出る場所をずらしている
+  .top-left-item {
+    position: absolute;
+    top: 0;
+  }
+  .bottom-left-item {
+    position: absolute;
+    bottom: 0;
+  }
+  .top-right-item {
+    position: absolute;
+    right: 0;
+  }
+  .bottom-right-item {
+    position: absolute;
+    right: 0;
+    bottom: 50%;
+  }
 }

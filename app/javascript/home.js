@@ -1,5 +1,5 @@
 
-$(document).ready(function() {
+$(document).on('turbolinks:load', function () {
   console.log("home.jsを読み込んでいます！");
 
   var $scrollBtn = $('#scroll-btn');

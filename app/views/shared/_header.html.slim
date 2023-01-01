@@ -1,21 +1,5 @@
 / TODO:pc版のヘッダーはOK。レスポンシブ対応する
 header
-  ul.side-menu
-    - if user_signed_in?
-      / ゲストユーザーでログインしてる時はアカウント編集を非表示にする。
-      - if current_user.email != "guest@example.com"
-        li.user-btn
-          = link_to t('account_edit'), edit_user_registration_path, class: 'btn btn-design'
-      li.user-btn
-        = link_to t('logout'), destroy_user_session_path, method: :delete, class: 'btn btn-design'
-    - else
-        li.user-btn
-          = link_to t('sign_up'), new_user_registration_path, class: 'btn btn-design'
-        li.user-btn
-          = link_to t('login'), new_user_session_path, class: 'btn btn-design'
-        li.user-btn
-          = link_to t('guest_login'), users_guest_sign_in_path, method: :post, class: 'btn btn-design'
-
   .header-left
     = link_to image_tag("common/logo3.png"), root_url, class: "header-logo"
     a.catch-copy href="/"

@@ -3,6 +3,7 @@ $(document).on("turbolinks:load", function () {
 
   // クリックすると画面を拡大表示する
   $(".img-area img").on("click", function () {
+    console.log("食品の画像を表示する");
     $("#gray-display").html($(this).prop("outerHTML"));
     $("#gray-display").fadeIn(200);
   });

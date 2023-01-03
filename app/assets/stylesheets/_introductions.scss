@@ -1,27 +1,90 @@
 @import "definition";
+// 画像をスクロールでフェードイン=======================
 
+.fadein {
+  opacity: 0;
+  transform: translate(0, -150px);
+  transition: all 1500ms;
+}
+
+.fadein.scrollin {
+  opacity: 1;
+  transform: translate(0, 0);
+}
+
+// 製造フロー =======================
 .cooking-recipe-area {
   overflow: hidden;
   background: image-url("introduction/background-image-large.png");
   background-size: cover;
-
-  img {
-    border-radius: 50%;
-    max-width: 400px;
-    max-height: 400px;
-    box-shadow: 0px 0px 20px 1px white;
-  }
 }
 
 .flow-box {
+  padding-top: 20px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 
 .flow-image {
+  cursor: pointer;
+  transition: all 500ms;
+  border-radius: 50%;
+  max-width: 400px;
+  max-height: 400px;
+  box-shadow: 0px 0px 20px 1px white;
 
+  &:hover {
+    transform: translate(-3px, -6px);
+    box-shadow: 10px 10px 20px 1px #333;
+  }
 }
+.small-flow-image {
+  max-width: 100px;
+  max-height: 100px;
+  margin: 15px;
+}
+// 画像グレー表示======================
+#flow-gray-display {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 100% !important;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 40;
+}
+#flow-gray-display .flow-image {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 20;
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 5px;
+}
+// #gray-image-contents {
+//   display: none;
+//   cursor: pointer;
+//   position: fixed;
+//   top: 0;
+//   bottom: 0;
+//   right: 3%;
+//   z-index: 41;
+// }
+// li.gray-image-item {
+//   background-color: red;
+//   width: 300px;
+//   height: 300px;
+//   margin-top: 15px;
+// }
+
+
+
+
 
 // 区切り線と画像の設定======================
 
@@ -229,16 +292,3 @@
 //     background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1185 248'><path d='M50.5 199.8c112.4 0 87.5-49 188.7-59.3s146.7 38.3 219.5 38.3 107.9-21.9 210.8-69.3c102.8-47.3 274-8.7 424.8 69.3 37.7 19.5 68 36.7 90.7 51.5V0H0v193C15 197.2 31.6 199.8 50.5 199.8zM1109 106.9c11 0 20 9 20 20 0 11-9 20-20 20s-20-9-20-20C1089 115.9 1098 106.9 1109 106.9zM370.5 57.9c13.5 0 24.5 11 24.5 24.5 0 13.5-11 24.5-24.5 24.5S346 95.9 346 82.4C346 68.9 357 57.9 370.5 57.9zM315 35.9c6.1 0 11 4.9 11 11s-4.9 11-11 11 -11-4.9-11-11S308.9 35.9 315 35.9z' fill='red'/></svg>");
 //   }
 // }
-
-// 画像をスクロールでフェードイン=======================
-
-.fadein {
-	opacity: 0;
-	transform: translate(0, -150px);
-	transition: all  1500ms;
-}
-
-.fadein.scrollin {
-	opacity: 1;
-	transform: translate(0, 0);
-}

@@ -2,18 +2,18 @@ h1.text-center
   = t('msg.know-food-sample')
 .cooking-recipe-area
   .flow-box
-    .flow-image.fadein
-      = image_tag 'introduction/05-2.jpg'
+    .fadein
+      = image_tag 'introduction/05-2.jpg', class: 'flow-image'
     h2
       = t('msg.procedure-1')
   .flow-box
     h2
       = t('msg.procedure-3')
-    .flow-image.fadein
-      = image_tag 'introduction/02-2.jpg'
+    .fadein
+      = image_tag 'introduction/02-2.jpg', class: 'flow-image'
   .flow-box
-    .flow-image.fadein
-      = image_tag 'introduction/06-2.jpg'
+    .fadein
+      = image_tag 'introduction/06-2.jpg', class: 'flow-image'
     h2
         = t('msg.procedure-3')
   = render partial: 'homes/introduction_link'

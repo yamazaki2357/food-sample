@@ -30,7 +30,7 @@ class ProductsController < ApplicationController
   end
 
   def edit
-    !current_user.admin? if redirect_to root_path, notice: t('msg.Do_not_edit_product')
+    # !current_user.admin? if redirect_to root_path, notice: t('msg.Do_not_edit_product') TODO:編集のためコメントアウト。要修正
   end
 
   def create

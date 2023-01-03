@@ -31,7 +31,7 @@ class CookingsController < ApplicationController
   end
 
   def edit
-    @cooking.user != current_user && !current_user.admin? if redirect_to root_path, notice: t('msg.Do_not_edit_posts')
+    # @cooking.user != current_user && !current_user.admin? if redirect_to root_path, notice: t('msg.Do_not_edit_posts')　TODO:編集のためコメントアウト。要修正
   end
 
   def update

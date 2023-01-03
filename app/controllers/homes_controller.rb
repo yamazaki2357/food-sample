@@ -6,7 +6,7 @@ class HomesController < ApplicationController
   before_action :set_user, only: %i[index]
 
   def index
-    @cooking_category_various = Cooking.where(cooking_name: %w[天ぷらそば定食 ハンバーガー エビチリ天津飯定食 ベリーワッフル])
+    @cooking_category_various = Cooking.where(cooking_name: %w[ベリーワッフル 天ぷらそば定食 ハンバーガー エビチリ天津飯定食]).order(:updated_at)
     # @cooking_category_various = []
     # TODO: トップページに名称指定で掲載していたもの
   end

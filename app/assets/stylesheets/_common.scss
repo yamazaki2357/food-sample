@@ -305,6 +305,7 @@ footer {
 
 .switch-item {
   width: 50%;
+  transition: all 0.1s;
 
   a {
     font-size: 1.4em;
@@ -337,9 +338,12 @@ footer {
     }
   }
 
-  &:hover .is-current {
+  &:hover {
     box-shadow: 3px 3px #615a5a;
     font-weight: bold;
+  }
+  &:active {
+    box-shadow: none;
   }
   &:nth-of-type(1) a:before {
     right: 0;

@@ -26,3 +26,6 @@ html
     = yield
     = render partial: 'shared/scroll_btn'
     = render partial: 'homes/footer'
+
+    / = debug(params) if Rails.env.development? TODO:本番では削除する
+    = debug(params)

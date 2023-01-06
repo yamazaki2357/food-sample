@@ -52,22 +52,22 @@ $(document).ready(function () {
     });
   });
 
-  // setInterval(function () {
-  //   var $active = $('#slideshow img.active');
+  setInterval(function () {
+    var $active = $('#slideshow img.active');
 
-  //   if ($active.length == 0) $active = $('#slideshow img:last');
+    if ($active.length == 0) $active = $('#slideshow img:last');
 
-  //   var $next = $active.next().length ? $active.next()
-  //     : $('#slideshow img:first');
+    var $next = $active.next().length ? $active.next()
+      : $('#slideshow img:first');
 
-  //   $active.addClass('last-active');
+    $active.addClass('last-active');
 
-  //   $next.css({ opacity: 0.0 })
-  //     .addClass('active')
-  //     .animate({ opacity: 1.0 }, 3000, function () {
-  //       $active.removeClass('active last-active');
-  //     });
-  //   }, 4000);
+    $next.css({ opacity: 0.0 })
+      .addClass('active')
+      .animate({ opacity: 1.0 }, 3000, function () {
+        $active.removeClass('active last-active');
+      });
+    }, 4000);
 
   // $('a[href^="#"]').click(function () {
   //   var time = 500;

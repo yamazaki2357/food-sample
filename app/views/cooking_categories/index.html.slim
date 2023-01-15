@@ -1,6 +1,7 @@
 h1.mx-auto.title.image_area
   = t('cooking_category_list')
   .carousel
+    / TODO:大きさを整えて、一定時間で自動回転するようにする
     figure
       = image_tag 'Japanese.jpg'
       = image_tag 'Western.jpg'
@@ -15,12 +16,13 @@ h1.mx-auto.title.image_area
         | ←
       button.nav.next.arrow-btn
         | →
-    .image_area_left
-      =image_tag "Clerk.png"
-    .image_area_right
-      =image_tag "menu_chumon_family.png"
+    / .image_area_left
+    /   =image_tag "Clerk.png"
+    / .image_area_right
+    /   =image_tag "menu_chumon_family.png"
+    / TODO: ダサいので別のデザインにしたい
   .container
-    .row.form-inline
+    .row.form-inline.mx-3
       - @all_cooking_categories.each.with_index(2) do |cooking_category, m|
         .col-xs-6.col-sm-4.col-md-3
           = link_to cooking_category

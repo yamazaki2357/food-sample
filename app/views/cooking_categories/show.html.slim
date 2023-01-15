@@ -3,7 +3,7 @@
     = render partial: 'shared/cooking_title'
     .cooking-category-title
       = @cooking_category.classification_name
-    .row.form-inline
+    .row.form-inline.mx-3
       - @cooking_category.cookings.each do |cooking|
         .col-xs-12.col-sm-6.col-md-3
           = link_to cooking

@@ -1,9 +1,9 @@
 .background-co
   .container
     = render partial: 'shared/cooking_title'
-    .row
+    .row.mx-3
       - @cookings_page.each do |cooking|
-        .col-xs-12.col-sm-6.col-md-3
+        .col-xs-12.col-sm-6.col-md-3.p-3
           .card
             = link_to cooking
               .ribbon.ribbon-top-right

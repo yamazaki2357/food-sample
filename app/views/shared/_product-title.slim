@@ -6,7 +6,9 @@
       = link_to t('products_switch'), products_path
       .check-food.far.fa-check-circle
 
-  h1 = t('view_product')
+  h1
+    = link_to products_path
+      = t('view_product')
   - if user_signed_in? && current_user.admin?
     .nav.justify-content-end
       = link_to new_product_path, class: 'nav-link btn margin-custom btn-design link-btn m-3'

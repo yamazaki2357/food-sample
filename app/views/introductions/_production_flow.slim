@@ -1,5 +1,10 @@
 h1.text-center
-  = t('msg.know-food-sample')
+  - if controller.controller_name == "homes"
+    .link-border = link_to introductions_path
+      = t('msg.know-food-sample')
+  - else
+    = t('msg.know-food-sample')
+
 .cooking-recipe-area
   .flow-box
     .fadein

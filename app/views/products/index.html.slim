@@ -2,10 +2,10 @@
   = render partial: 'modal'
   .container
     = render partial: 'shared/product-title'
-    .row
+    .row.mx-3
       - @products_page.each do |product|
         .form
-          .col-xs-2
+          .col-xs-2.float-left.mx-2.mb-2
             .card
               .card-top
                 = link_to product

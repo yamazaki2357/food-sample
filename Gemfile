@@ -3,13 +3,13 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '2.6.3'
+ruby '3.2.1'
 
 gem 'bootsnap', '>= 1.4.2', require: false
 gem 'jbuilder', '~> 2.7'
 gem 'mysql2', '>= 0.4.4'
 gem 'puma', '~> 4.3'
-gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
+gem 'rails', '>= 7.0.4.3'
 gem 'sass-rails', '>= 6'
 gem 'turbolinks', '~> 5'
 gem 'webpacker', '~> 5.0'
@@ -17,7 +17,7 @@ gem 'webpacker', '~> 5.0'
 gem 'devise'
 
 gem 'devise-i18n'
-gem 'rails-i18n', '~> 6.0'
+gem 'rails-i18n'
 
 gem 'html2slim'
 gem 'slim-rails', '>= 3.1.3'
